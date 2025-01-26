@@ -1,13 +1,13 @@
 <script>
 export default {
-  name: "HomePage.vue",
+  name: "BlogVue.vue"
 }
 </script>
 
 <template>
-  <p>test</p>
+<p>blog</p>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>

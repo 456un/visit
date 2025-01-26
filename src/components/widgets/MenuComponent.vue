@@ -6,8 +6,8 @@ export default {
 
 <template>
   <div class="menu">
-    <a href="/">Главная</a>
-    <a href="/blog">Блог</a>
+    <RouterLink to="/">Главная</RouterLink>
+    <RouterLink to="/blog">Блог</RouterLink>
   </div>
 </template>
 

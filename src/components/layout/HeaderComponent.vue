@@ -1,4 +1,7 @@
 <script>
+import LogoComponent from '@/components/ui/LogoComponent.vue'
+import MenuComponent from '@/components/widgets/MenuComponent.vue'
+
 export default {
   name: "HeaderComponent",
   components: {
@@ -6,9 +9,6 @@ export default {
     MenuComponent,
   }
 }
-
-import LogoComponent from '@/components/ui/LogoComponent.vue'
-import MenuComponent from '@/components/widgets/MenuComponent.vue'
 </script>
 
 <template>
