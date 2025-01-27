@@ -12,7 +12,7 @@ export default {
   <div class="review-component">
     <div class="review-avatar"></div>
     <div class="review-content">
-      <a class="review-content-name" href="{{ link }}">{{ name }}</a>
+      <a class="review-content-name" :href="link">{{ name }}</a>
       <div class="review-text"><slot></slot></div>
     </div>
   </div>
