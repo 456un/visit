@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-<p>blog</p>
+<p>Пусто</p>
 </template>
 
 <style scoped lang="scss">

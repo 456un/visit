@@ -36,9 +36,11 @@ main {
 
   #app-content {
     display: flex;
+    width: 100%;
 
     .content {
       margin-left: 40px;
+      width: calc(100% - 40px);
     }
   }
 }
