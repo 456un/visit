@@ -20,7 +20,7 @@ export default {
 <template>
   <div class="work-experience">
     <YearsComponent :startYear="startYear" :endYear="endYear"/>
-    <WorkExperienceBoxComponent :title="title" :place="place">
+    <WorkExperienceBoxComponent class="work-experience-box" :title="title" :place="place">
       <slot></slot>
     </WorkExperienceBoxComponent>
   </div>
@@ -31,5 +31,9 @@ export default {
   display: flex;
   margin-left: 25px;
   width: 100%;
+
+  .work-experience-box {
+    width: calc(100% - 250px);
+  }
 }
 </style>
