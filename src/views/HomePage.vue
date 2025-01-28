@@ -4,6 +4,7 @@ import ProgressBarComponent from "@/components/ui/ProgressBarComponent.vue";
 import WorkExperienceComponent from "@/components/widgets/WorkExperienceComponent.vue";
 import ReviewComponent from "@/components/widgets/ReviewComponent.vue";
 import PortfolioComponent from "@/components/ui/PortfolioComponent.vue";
+import FaqComponent from "@/components/ui/FaqComponent.vue";
 
 export default {
   name: "HomePage.vue",
@@ -13,6 +14,7 @@ export default {
     WorkExperienceComponent,
     ReviewComponent,
     PortfolioComponent,
+    FaqComponent,
   }
 }
 </script>
@@ -135,6 +137,18 @@ export default {
         </PortfolioComponent>
       </div>
     </div>
+  </BlockInfoComponent>
+
+  <BlockInfoComponent id="faq">
+    <h2 class="title">FAQ</h2>
+    <FaqComponent question="Сколько стоят мои услуги?">
+      Верстка/фронт: 2000 руб/ч.<br>
+      Бэкенд: 3000 руб/ч.
+    </FaqComponent>
+    <FaqComponent question="Конфиденциальность">
+      Ваши проекты не будут добавлены в портфолио, без согласования с вами.<br>
+      Так же проект не будет упоминаться в личных переписках, без вашего согласия.
+    </FaqComponent>
   </BlockInfoComponent>
 </template>
 
