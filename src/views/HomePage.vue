@@ -119,18 +119,18 @@ export default {
     <h2 class="title">Портфолио</h2>
     <div class="portfolio-columns">
       <div class="portfolio-col">
-        <PortfolioComponent src="/assets/img/sso.jpg">
+        <PortfolioComponent src="/assets/img/sso.jpg" class="portfolio-el">
           SOKOLOV ID<br>SSO
         </PortfolioComponent>
-        <PortfolioComponent src="/assets/img/sokolov.jpg">
+        <PortfolioComponent src="/assets/img/sokolov.jpg" class="portfolio-el">
           Сайт sokolov.ru
         </PortfolioComponent>
       </div>
       <div class="portfolio-col">
-        <PortfolioComponent src="/assets/img/pay.jpg">
+        <PortfolioComponent src="/assets/img/pay.jpg" class="portfolio-el">
           Платежный сервис<br>SOKOLOV
         </PortfolioComponent>
-        <PortfolioComponent src="/assets/img/geo.jpg">
+        <PortfolioComponent src="/assets/img/geo.jpg" class="portfolio-el">
           SOKOLOV<br>GEO
         </PortfolioComponent>
       </div>
@@ -172,5 +172,41 @@ export default {
 
 .portfolio-col {
   display: flex;
+}
+
+.portfolio-col:first-child {
+  .portfolio-el:first-child {
+    border-top-left-radius: 8px;
+
+    &:before {
+      border-top-left-radius: 8px;
+    }
+  }
+
+  .portfolio-el:last-child {
+    border-top-right-radius: 8px;
+
+    &:before {
+      border-top-right-radius: 8px;
+    }
+  }
+}
+
+.portfolio-col:last-child {
+  .portfolio-el:first-child {
+    border-bottom-left-radius: 8px;
+
+    &:before {
+      border-bottom-left-radius: 8px;
+    }
+  }
+
+  .portfolio-el:last-child {
+    border-bottom-right-radius: 8px;
+
+    &:before {
+      border-bottom-right-radius: 8px;
+    }
+  }
 }
 </style>

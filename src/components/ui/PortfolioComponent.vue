@@ -54,7 +54,7 @@ export default {
   .text {
     z-index: 2;
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 2s;
   }
 }
 </style>
