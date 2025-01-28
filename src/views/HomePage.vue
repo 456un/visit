@@ -5,6 +5,8 @@ import WorkExperienceComponent from "@/components/widgets/WorkExperienceComponen
 import ReviewComponent from "@/components/widgets/ReviewComponent.vue";
 import PortfolioComponent from "@/components/ui/PortfolioComponent.vue";
 import FaqComponent from "@/components/ui/FaqComponent.vue";
+import SocialComponent from "@/components/widgets/SocialComponent.vue";
+import ContactComponent from "@/components/widgets/ContactComponent.vue";
 
 export default {
   name: "HomePage.vue",
@@ -15,6 +17,8 @@ export default {
     ReviewComponent,
     PortfolioComponent,
     FaqComponent,
+    SocialComponent,
+    ContactComponent,
   }
 }
 </script>
@@ -64,7 +68,7 @@ export default {
     </div>
   </BlockInfoComponent>
 
-  <BlockInfoComponent id="works">
+  <BlockInfoComponent id="#works">
     <h2 class="title">Опыт работы</h2>
     <WorkExperienceComponent startYear="2011" endYear="2013" title="Лаборант" place="КГУ им. Н.А. Некрасова">
       Администрирование компьютерных классов, ремонт компьютеров, установка ОС, настройка и установка ПО
@@ -91,14 +95,14 @@ export default {
     </WorkExperienceComponent>
   </BlockInfoComponent>
 
-  <BlockInfoComponent id="edicatons">
+  <BlockInfoComponent id="#edicatons">
     <h2 class="title">Образование</h2>
     <WorkExperienceComponent startYear="2010" endYear="2015" title="Учитель информатики и математики"
                              place="КГУ им. Н.А. Некрасова">
     </WorkExperienceComponent>
   </BlockInfoComponent>
 
-  <BlockInfoComponent id="reviews">
+  <BlockInfoComponent id="#reviews">
     <h2 class="title">Отзывы</h2>
     <ReviewComponent name="Анна" link="https://freelance.ru/krinic">
       Как всегда четко и профессионально!
@@ -117,7 +121,7 @@ export default {
     </ReviewComponent>
   </BlockInfoComponent>
 
-  <BlockInfoComponent id="portfolio">
+  <BlockInfoComponent id="#portfolio">
     <h2 class="title">Портфолио</h2>
     <div class="portfolio-columns">
       <div class="portfolio-col">
@@ -139,7 +143,7 @@ export default {
     </div>
   </BlockInfoComponent>
 
-  <BlockInfoComponent id="faq">
+  <BlockInfoComponent id="#faq">
     <h2 class="title">FAQ</h2>
     <FaqComponent question="Сколько стоят мои услуги?">
       Верстка/фронт: 2000 руб/ч.<br>
@@ -149,6 +153,14 @@ export default {
       Ваши проекты не будут добавлены в портфолио, без согласования с вами.<br>
       Так же проект не будет упоминаться в личных переписках, без вашего согласия.
     </FaqComponent>
+  </BlockInfoComponent>
+
+  <BlockInfoComponent id="#contact">
+    <h2 class="title">Написать мне</h2>
+    <div class="contact">
+      <SocialComponent/>
+      <ContactComponent/>
+    </div>
   </BlockInfoComponent>
 </template>
 
@@ -222,5 +234,10 @@ export default {
       border-bottom-right-radius: 8px;
     }
   }
+}
+
+.contact {
+  margin-left: 8.6%;
+  margin-right: 8.6%;
 }
 </style>

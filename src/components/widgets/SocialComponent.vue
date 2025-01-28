@@ -22,7 +22,7 @@ export default {
     a {
       height: 20px;
       width: 20px;
-      margin: 0 5px;
+      margin: 0 10px;
 
       &.telegram {
         background: transparent url("@/assets/img/telegram.png") no-repeat center center;
