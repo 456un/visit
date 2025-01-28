@@ -3,6 +3,7 @@ import BlockInfoComponent from '@/components/widgets/BlockInfoComponent.vue'
 import ProgressBarComponent from "@/components/ui/ProgressBarComponent.vue";
 import WorkExperienceComponent from "@/components/widgets/WorkExperienceComponent.vue";
 import ReviewComponent from "@/components/widgets/ReviewComponent.vue";
+import PortfolioComponent from "@/components/ui/PortfolioComponent.vue";
 
 export default {
   name: "HomePage.vue",
@@ -10,7 +11,8 @@ export default {
     BlockInfoComponent,
     ProgressBarComponent,
     WorkExperienceComponent,
-    ReviewComponent
+    ReviewComponent,
+    PortfolioComponent,
   }
 }
 </script>
@@ -112,6 +114,28 @@ export default {
       Работу выполнил хорошо, советую для сотрудничества!
     </ReviewComponent>
   </BlockInfoComponent>
+
+  <BlockInfoComponent id="portfolio">
+    <h2 class="title">Портфолио</h2>
+    <div class="portfolio-columns">
+      <div class="portfolio-col">
+        <PortfolioComponent src="/assets/img/sso.jpg">
+          SOKOLOV ID<br>SSO
+        </PortfolioComponent>
+        <PortfolioComponent src="/assets/img/sokolov.jpg">
+          Сайт sokolov.ru
+        </PortfolioComponent>
+      </div>
+      <div class="portfolio-col">
+        <PortfolioComponent src="/assets/img/pay.jpg">
+          Платежный сервис<br>SOKOLOV
+        </PortfolioComponent>
+        <PortfolioComponent src="/assets/img/geo.jpg">
+          SOKOLOV<br>GEO
+        </PortfolioComponent>
+      </div>
+    </div>
+  </BlockInfoComponent>
 </template>
 
 <style scoped>
@@ -144,5 +168,9 @@ export default {
     width: calc(50% - 30px);
     padding: 0 15px;
   }
+}
+
+.portfolio-col {
+  display: flex;
 }
 </style>
