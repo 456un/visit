@@ -7,7 +7,7 @@ export default {
 <template>
   <div class="menu">
     <RouterLink to="/">Главная</RouterLink>
-    <RouterLink to="/blog">Блог</RouterLink>
+    <RouterLink to="/blog" :style="{display: 'none'}">Блог</RouterLink>
   </div>
 </template>
 

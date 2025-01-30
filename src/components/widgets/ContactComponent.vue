@@ -21,6 +21,18 @@ export default {
       this.error = null;
       this.response = null;
 
+      if (!this.form.email && !this.form.telegram) {
+        this.error = 'Укажите email или телеграм для связи с вами';
+        this.isSubmitting = false;
+        return;
+      }
+
+      if (this.form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.form.email)) {
+        this.error = 'Email не валиден';
+        this.isSubmitting = false;
+        return;
+      }
+
       try {
         // Отправка данных через API-сервис
         this.response = await sendFormData(this.form); // Ответ от сервера
@@ -50,7 +62,10 @@ export default {
         <label>Сообщение</label>
         <textarea name="message" v-model="form.message"/>
       </div>
-      <button class="submit" :disabled="isSubmitting">Отправить</button>
+      <div class="form-block">
+        <div class="error"><span>{{ error ? '* ' : '' }}</span>{{ error }}</div>
+        <button class="submit" :disabled="isSubmitting">Отправить</button>
+      </div>
     </div>
   </form>
 </template>
@@ -103,6 +118,20 @@ export default {
     margin-left: auto;
     margin-right: 0;
     display: flex;
+    height: fit-content;
+  }
+
+  .form-block {
+    display: flex;
+
+    .error {
+      letter-spacing: 0.18em;
+      font-size: 14px;
+
+      span {
+        color: red;
+      }
+    }
   }
 }
 </style>

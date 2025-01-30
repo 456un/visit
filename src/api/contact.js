@@ -16,6 +16,6 @@ export const sendFormData = async (data) => {
         const response = await api.post('/api/telegram/send', data);
         return response.data; // Возвращаем данные ответа
     } catch (error) {
-        throw error.response ? error.response.data : 'Произошла ошибка при отправке данных';
+        throw 'Произошла ошибка при отправке данных';
     }
 };
