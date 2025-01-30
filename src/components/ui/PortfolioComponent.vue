@@ -38,7 +38,7 @@ export default {
     transition: 1s opacity;
   }
 
-  &:hover {
+  &:hover, &:focus {
     &:before {
       opacity: 1;
       background: rgba(0, 0, 0, 0.8); /* Черный полупрозрачный слой */
@@ -55,6 +55,11 @@ export default {
     z-index: 2;
     opacity: 0;
     transition: opacity 2s;
+  }
+  @media (max-width: 768px) {
+    .portfolio {
+      font-size: 18px;
+    }
   }
 }
 </style>

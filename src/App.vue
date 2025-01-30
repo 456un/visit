@@ -42,6 +42,16 @@ main {
       margin-left: 40px;
       width: calc(100% - 40px);
     }
+
+    @media (max-width: 768px) {
+      .content {
+        margin-left: 0;
+      }
+
+      .photo {
+        display: none;
+      }
+    }
   }
 }
 </style>

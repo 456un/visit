@@ -18,4 +18,11 @@ export default {
     width: calc(100% - 70px);
     border-radius: 8px;
   }
+
+  @media (max-width: 768px) {
+    .block-info {
+      width: calc(100% - 10px);
+      padding: 40px 25px;
+    }
+  }
 </style>

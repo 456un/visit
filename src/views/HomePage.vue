@@ -7,10 +7,12 @@ import PortfolioComponent from "@/components/ui/PortfolioComponent.vue";
 import FaqComponent from "@/components/ui/FaqComponent.vue";
 import SocialComponent from "@/components/widgets/SocialComponent.vue";
 import ContactComponent from "@/components/widgets/ContactComponent.vue";
+import PhotoComponent from "@/components/layout/PhotoComponent.vue";
 
 export default {
   name: "HomePage.vue",
   components: {
+    PhotoComponent,
     BlockInfoComponent,
     ProgressBarComponent,
     WorkExperienceComponent,
@@ -24,6 +26,9 @@ export default {
 </script>
 
 <template>
+  <BlockInfoComponent class="no-padding top-block" id="#photo">
+    <PhotoComponent class="photo-top"/>
+  </BlockInfoComponent>
   <BlockInfoComponent id="#about">
     <h2 class="title">Про меня</h2>
     <div class="content">
@@ -125,18 +130,18 @@ export default {
     <h2 class="title">Портфолио</h2>
     <div class="portfolio-columns">
       <div class="portfolio-col">
-        <PortfolioComponent src="/assets/img/sso.jpg" class="portfolio-el">
+        <PortfolioComponent src="/assets/img/sso.jpg" class="portfolio-el" tabindex="1">
           SOKOLOV ID<br>SSO
         </PortfolioComponent>
-        <PortfolioComponent src="/assets/img/sokolov.jpg" class="portfolio-el">
+        <PortfolioComponent src="/assets/img/sokolov.jpg" class="portfolio-el" tabindex="2">
           Сайт sokolov.ru
         </PortfolioComponent>
       </div>
       <div class="portfolio-col">
-        <PortfolioComponent src="/assets/img/pay.jpg" class="portfolio-el">
+        <PortfolioComponent src="/assets/img/pay.jpg" class="portfolio-el" tabindex="3">
           Платежный сервис<br>SOKOLOV
         </PortfolioComponent>
-        <PortfolioComponent src="/assets/img/geo.jpg" class="portfolio-el">
+        <PortfolioComponent src="/assets/img/geo.jpg" class="portfolio-el" tabindex="4">
           SOKOLOV<br>GEO
         </PortfolioComponent>
       </div>
@@ -239,5 +244,37 @@ export default {
 .contact {
   margin-left: 8.6%;
   margin-right: 8.6%;
+}
+
+.top-block {
+  display: none;
+}
+
+.no-padding {
+  padding: 0;
+  width: 100%;
+}
+
+.photo-top {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .top-block {
+    display: block;
+  }
+
+  .columns {
+    display: block;
+
+    .col {
+      width: auto;
+    }
+  }
+
+  .contact {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 </style>

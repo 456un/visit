@@ -36,4 +36,10 @@ export default {
     width: calc(100% - 250px);
   }
 }
+
+@media (max-width: 768px) {
+  .work-experience {
+    margin-left: 0;
+  }
+}
 </style>

@@ -54,4 +54,10 @@ export default {
     }
   }
 }
+
+@media (max-width: 768px) {
+  .review-component {
+    padding: 0 10px;
+  }
+}
 </style>

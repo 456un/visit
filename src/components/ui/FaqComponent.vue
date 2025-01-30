@@ -32,6 +32,7 @@ export default {
 
 <style scoped lang="scss">
 .faq {
+
   .question {
     font-size: 14px;
     line-height: 1.1;
@@ -39,9 +40,9 @@ export default {
     padding: 10px;
     position: relative;
     background: #1FA184;
-    width: 100%;
     border-radius: 8px;
     text-transform: uppercase;
+    width: calc(100% - 20px);
 
     .text {
       z-index: 2;
