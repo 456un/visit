@@ -2,14 +2,17 @@
 export default {
   name: "PortfolioComponent",
   props: [
-      'src',
+    'src',
   ],
 }
 </script>
 
 <template>
-  <div class="portfolio" :style="{ background: `transparent url('${src}') no-repeat top left`, backgroundSize: 'cover' }">
-    <div class="text"><slot></slot></div>
+  <div class="portfolio"
+       :style="{ background: `transparent url('${src}') no-repeat top left`, backgroundSize: 'cover' }">
+    <div class="text">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -56,6 +59,7 @@ export default {
     opacity: 0;
     transition: opacity 2s;
   }
+
   @media (max-width: 768px) {
     .portfolio {
       font-size: 18px;
