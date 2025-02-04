@@ -13,6 +13,7 @@ export default {
       isSubmitting: false,
       error: null,
       response: null,
+      success: null,
     };
   },
   methods: {
@@ -20,25 +21,30 @@ export default {
       this.isSubmitting = true;
       this.error = null;
       this.response = null;
+      this.success = null;
 
       if (!this.form.email && !this.form.telegram) {
         this.error = 'Укажите email или телеграм для связи с вами';
         this.isSubmitting = false;
+        this.success = false;
         return;
       }
 
       if (this.form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.form.email)) {
         this.error = 'Email не валиден';
         this.isSubmitting = false;
+        this.success = false;
         return;
       }
 
       try {
         // Отправка данных через API-сервис
         this.response = await sendFormData(this.form); // Ответ от сервера
+        this.success = true;
       } catch (err) {
         // Обработка ошибок
         this.error = err;
+        this.success = false;
       } finally {
         this.isSubmitting = false;
       }
@@ -64,6 +70,7 @@ export default {
       </div>
       <div class="form-block">
         <div class="error"><span>{{ error ? '* ' : '' }}</span>{{ error }}</div>
+        <div class="message">{{ success ? 'Сообщение успешно отправлено' : ''}}</div>
         <button class="submit" :disabled="isSubmitting">Отправить</button>
       </div>
     </div>
@@ -124,7 +131,7 @@ export default {
   .form-block {
     display: flex;
 
-    .error {
+    .error, .success {
       letter-spacing: 0.18em;
       font-size: 14px;
 
