@@ -32,9 +32,13 @@ export default {
   <BlockInfoComponent id="#about">
     <h2 class="title">Про меня</h2>
     <div class="content">
-      Добрый день! Меня зовут Владислав Сенников, я профессиональный web-разработчик с более чем 11-летним опытом.
-      Я специализируюсь на создании и поддержке высоконагруженных систем, интеграции сервисов и улучшении существующих
-      решений. Основные технологии: Go, PHP, Postgres, Laravel, Yii2, Symfony, Vue и др.
+      <p>Добрый день! Меня зовут Владислав Сенников, я профессиональный web-разработчик с более чем 11-летним
+        коммерческим
+        опытом.</p>
+      <p>Я специализируюсь на создании и поддержке высоконагруженных систем, интеграции сервисов и улучшении
+        существующих
+        решений. Имею большой опыт построения сервисов, с нуля, по требованиям заказчика.</p>
+      <p>Основные технологии: Go, PHP, Postgres, Laravel, Yii2, Symfony, Vue и др.</p>
     </div>
   </BlockInfoComponent>
 
@@ -43,60 +47,75 @@ export default {
     <div class="columns">
       <div class="col">
         <div class="col-title">Языки</div>
-        <ProgressBarComponent value="95" title="PHP"/>
-        <ProgressBarComponent value="60" title="Go"/>
-        <ProgressBarComponent value="60" title="Чистый JS"/>
-        <ProgressBarComponent value="40" title="Vue"/>
+        <ProgressBarComponent value="99" title="PHP"/>
+        <ProgressBarComponent value="75" title="Go"/>
+        <ProgressBarComponent value="80" title="Чистый JS"/>
+        <ProgressBarComponent value="50" title="Vue"/>
       </div>
       <div class="col">
         <div class="col-title">Базы данных</div>
-        <ProgressBarComponent value="85" title="Postgres"/>
-        <ProgressBarComponent value="80" title="MySQL/MariaDB"/>
-        <ProgressBarComponent value="40" title="MongoDB"/>
+        <ProgressBarComponent value="99" title="Postgres"/>
+        <ProgressBarComponent value="95" title="MySQL/MariaDB"/>
+        <ProgressBarComponent value="80" title="MongoDB"/>
       </div>
     </div>
 
     <div class="columns">
       <div class="col">
         <div class="col-title">Фреймворки/CMS</div>
-        <ProgressBarComponent value="95" title="Laravel"/>
-        <ProgressBarComponent value="95" title="Yii2"/>
-        <ProgressBarComponent value="70" title="Symfony"/>
-        <ProgressBarComponent value="90" title="Битрикс24/Битрикс"/>
+        <ProgressBarComponent value="99" title="Laravel"/>
+        <ProgressBarComponent value="99" title="Yii2"/>
+        <ProgressBarComponent value="80" title="Symfony"/>
+        <ProgressBarComponent value="99" title="Битрикс24/Битрикс"/>
       </div>
       <div class="col">
         <div class="col-title">Другое</div>
-        <ProgressBarComponent value="60" title="RabbitMQ"/>
-        <ProgressBarComponent value="50" title="Docker"/>
-        <ProgressBarComponent value="60" title="Верстка"/>
+        <ProgressBarComponent value="95" title="RabbitMQ"/>
+        <ProgressBarComponent value="60" title="Docker"/>
+        <ProgressBarComponent value="80" title="Верстка"/>
+        <ProgressBarComponent value="90" title="Системный анализ"/>
       </div>
     </div>
   </BlockInfoComponent>
 
   <BlockInfoComponent id="#works">
     <h2 class="title">Опыт работы</h2>
-    <WorkExperienceComponent startYear="2011" endYear="2013" title="Лаборант" place="КГУ им. Н.А. Некрасова">
-      Администрирование компьютерных классов, ремонт компьютеров, установка ОС, настройка и установка ПО
+    <WorkExperienceComponent startYear="2011" endYear="2013" title="Лаборант (эникей)" place="КГУ им. Н.А. Некрасова">
+      Администрирование компьютерных классов, ремонт компьютеров, установка ОС, настройка и установка ПО.
     </WorkExperienceComponent>
 
-    <WorkExperienceComponent startYear="2013" endYear="2014" title="Технолог" place="КГУ им. Н.А. Некрасова">
-      Администрирование компьютерных классов, ремонт компьютеров, установка ОС, настройка и установка ПО,
-      работа с дистанционной системой обучения Moodle, разработка ПО на языке программирования C#
+    <WorkExperienceComponent startYear="2013" endYear="2014" title="Технолог (эникей, прикладной разработчик)"
+                             place="КГУ им. Н.А. Некрасова">
+      <p>Администрирование компьютерных классов, ремонт компьютеров, установка ОС, настройка и установка ПО,
+        работа с дистанционной системой обучения Moodle.</p>
+      <p>Разработка ПО на языке программирования C#.</p>
     </WorkExperienceComponent>
 
     <WorkExperienceComponent startYear="2014" endYear="2015" title="Web-программист" place="Веб-студия WSDV">
-      Верстка и программирование сайтов, работа с 1C-Битрикс, создание сайтов визиток
+      <p>Верстка и программирование сайтов, работа с 1C-Битрикс
+        (например: <a href="http://www.ecodomprom.ru/">http://www.ecodomprom.ru/</a>), работа напрямую с заказчиком.</p>
+      <p>Создание сайтов визиток.</p>
     </WorkExperienceComponent>
 
     <WorkExperienceComponent startYear="2016" endYear="2017" title="Fullstack разработчик 1С-Битрикс"
                              place="Веб-студия Digitalwand">
-      Разработка функционала различной сложности, для сайтов работающих на 1C-Битрикс и Битрикс24
+      Разработка функционала различной сложности, для сайтов работающих на 1C-Битрикс и Битрикс24.
+      Работа напрямую с заказчиком.
     </WorkExperienceComponent>
 
     <WorkExperienceComponent startYear="2017" endYear="2024" title="Ведущий бэкенд разработчик" place="SOKOLOV">
-      Разработка центра единой авторизации (SSO), поддержка и доработка geo сервиса,
-      поддержка и доработка корпоративного портала на Битрикс24, развитие сайта sokolov.ru,
-      разработка сервиса онлайн оплат
+      <p>Разработка центра единой авторизации (SSO), с нуля, без ТЗ.</p>
+      <p>Самостоятельная поддержка и разработка geo сервиса (работа с postgres в связке с PostGIS).</p>
+      <p>Самостоятельная поддержка и доработка корпоративного портала на Битрикс24 (написание модулей,
+        изменение функционала, без затрагивания ядра системы, прямая работа с БД через ORM,
+        реализация своей exchange системы для интеграции с календарем outlook).</p>
+      <p>Развитие сайта sokolov.ru (корзина, оплаты, каталог, авторизация, работа со скидочной системой).</p>
+      <p>Командная разработка, с нуля, сервиса онлайн оплат (прямая интеграция с системами оплат: GooglePay, ApplePay,
+        Сбер, СБП, Тинькофф и др.).</p>
+      <p>Прямое общение с тех. поддержкой сервисов, до получения результатов.</p>
+      <p>Разработка бэкенд части b2c сайта, для продажи украшений в китайском сегменте.</p>
+      <p>Написание с нуля сервиса для работы с ФЗ 115.</p>
+      <p>Написание сервиса для мониторинга цен на партнерских сайтах.</p>
     </WorkExperienceComponent>
   </BlockInfoComponent>
 
@@ -154,6 +173,9 @@ export default {
       Верстка/фронт: 2000 руб/ч.<br>
       Бэкенд: 3000 руб/ч.
     </FaqComponent>
+    <FaqComponent question="Сколько стоит прямая интеграция с платежной системой?">
+      MVP (минимально жизнеспособный продукт) стоит от 100к рублей, в зависимости от требований
+    </FaqComponent>
     <FaqComponent question="Конфиденциальность">
       Ваши проекты не будут добавлены в портфолио, без согласования с вами.<br>
       Так же проект не будет упоминаться в личных переписках, без вашего согласия.
@@ -170,6 +192,11 @@ export default {
 </template>
 
 <style scoped>
+a {
+  color: white;
+  text-decoration: none;
+}
+
 .title {
   text-transform: uppercase;
   font-size: 30px;
