@@ -70,8 +70,12 @@ export default {
       </div>
       <div class="form-block">
         <div class="error"><span>{{ error ? '* ' : '' }}</span>{{ error }}</div>
-        <div class="message">{{ success ? 'Сообщение успешно отправлено' : ''}}</div>
-        <button class="submit" :disabled="isSubmitting">Отправить</button>
+        <div class="message">{{ success ? 'Сообщение успешно отправлено' : '' }}</div>
+
+        <div class="btn-block">
+          <button class="submit" :class="{dark: isSubmitting}" :disabled="isSubmitting">Отправить</button>
+          <div class="spinner" :class="{vis: isSubmitting}"></div>
+        </div>
       </div>
     </div>
   </form>
@@ -109,23 +113,61 @@ export default {
     }
   }
 
-  button {
-    color: #FFFFFF;
-    background-color: #1FA184;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 1.2;
-    text-align: center;
-    vertical-align: middle;
-    padding: 8px 25px;
-    border-radius: 35px;
-    border: none;
-    outline: none;
-    cursor: pointer;
+  .btn-block {
+    position: relative;
+    display: flex;
     margin-left: auto;
     margin-right: 0;
-    display: flex;
+    width: fit-content;
     height: fit-content;
+
+    .spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      border: 3px solid #fff;
+      border-top: 3px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      display: none;
+
+      &.vis {
+        display: block;
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    button {
+      color: #FFFFFF;
+      background-color: #1FA184;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      vertical-align: middle;
+      padding: 8px 25px;
+      border-radius: 35px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      height: fit-content;
+
+      &.dark {
+        background-color: #172d27;
+        color: #626262;
+      }
+    }
   }
 
   .form-block {
