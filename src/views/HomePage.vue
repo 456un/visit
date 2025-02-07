@@ -8,6 +8,7 @@ import FaqComponent from "@/components/ui/FaqComponent.vue";
 import SocialComponent from "@/components/widgets/SocialComponent.vue";
 import ContactComponent from "@/components/widgets/ContactComponent.vue";
 import PhotoComponent from "@/components/layout/PhotoComponent.vue";
+import SkillsBlockComponent from "@/components/widgets/SkillsBlockComponent.vue";
 
 export default {
   name: "HomePage.vue",
@@ -21,6 +22,7 @@ export default {
     FaqComponent,
     SocialComponent,
     ContactComponent,
+    SkillsBlockComponent,
   }
 }
 </script>
@@ -44,38 +46,146 @@ export default {
 
   <BlockInfoComponent id="#skills">
     <h2 class="title">Скиллы</h2>
-    <div class="columns">
-      <div class="col">
-        <div class="col-title">Языки</div>
-        <ProgressBarComponent value="99" title="PHP"/>
-        <ProgressBarComponent value="75" title="Go"/>
-        <ProgressBarComponent value="80" title="Чистый JS"/>
-        <ProgressBarComponent value="50" title="Vue"/>
-      </div>
-      <div class="col">
-        <div class="col-title">Базы данных</div>
-        <ProgressBarComponent value="99" title="Postgres"/>
-        <ProgressBarComponent value="95" title="MySQL/MariaDB"/>
-        <ProgressBarComponent value="80" title="MongoDB"/>
-      </div>
-    </div>
+    <SkillsBlockComponent>
+      <template #main>
+        <div class="columns">
+          <div class="col">
+            <div class="col-title">Языки</div>
+            <ProgressBarComponent value="99" title="PHP"/>
+            <ProgressBarComponent value="75" title="Go"/>
+            <ProgressBarComponent value="80" title="Чистый JS"/>
+            <ProgressBarComponent value="50" title="Vue"/>
+            <ProgressBarComponent value="30" title="Python"/>
+          </div>
+          <div class="col">
+            <div class="col-title">Базы данных</div>
+            <ProgressBarComponent value="99" title="Postgres"/>
+            <ProgressBarComponent value="95" title="MySQL/MariaDB"/>
+            <ProgressBarComponent value="80" title="MongoDB"/>
+            <ProgressBarComponent value="70" title="Couchbase"/>
+            <ProgressBarComponent value="60" title="MSSQL"/>
+          </div>
+        </div>
 
-    <div class="columns">
-      <div class="col">
-        <div class="col-title">Фреймворки/CMS</div>
-        <ProgressBarComponent value="99" title="Laravel"/>
-        <ProgressBarComponent value="99" title="Yii2"/>
-        <ProgressBarComponent value="80" title="Symfony"/>
-        <ProgressBarComponent value="99" title="Битрикс24/Битрикс"/>
-      </div>
-      <div class="col">
-        <div class="col-title">Другое</div>
-        <ProgressBarComponent value="95" title="RabbitMQ"/>
-        <ProgressBarComponent value="60" title="Docker"/>
-        <ProgressBarComponent value="80" title="Верстка"/>
-        <ProgressBarComponent value="90" title="Системный анализ"/>
-      </div>
-    </div>
+        <div class="columns">
+          <div class="col">
+            <div class="col-title">Фреймворки/CMS</div>
+            <ProgressBarComponent value="99" title="Laravel/Lumen"/>
+            <ProgressBarComponent value="99" title="Yii2"/>
+            <ProgressBarComponent value="80" title="Symfony"/>
+            <ProgressBarComponent value="99" title="Битрикс24/Битрикс"/>
+            <ProgressBarComponent value="90" title="Slim"/>
+            <ProgressBarComponent value="30" title="Django"/>
+          </div>
+          <div class="col">
+            <div class="col-title">Другое</div>
+            <ProgressBarComponent value="95" title="RabbitMQ"/>
+            <ProgressBarComponent value="60" title="Docker"/>
+            <ProgressBarComponent value="80" title="Верстка"/>
+            <ProgressBarComponent value="90" title="Системный анализ"/>
+          </div>
+        </div>
+      </template>
+      <template #all>
+        <div class="columns">
+          <div class="col">
+            <div class="col-title">Фронт/верстка</div>
+            <ProgressBarComponent value="99" title="HTML"/>
+            <ProgressBarComponent value="80" title="SASS/SCSS/CSS"/>
+            <ProgressBarComponent value="40" title="React"/>
+            <ProgressBarComponent value="80" title="JQuery"/>
+            <ProgressBarComponent value="80" title="Bootstrap"/>
+          </div>
+          <div class="col">
+            <div class="col-title">Безопасность</div>
+            <ProgressBarComponent value="90" title="XSS"/>
+            <ProgressBarComponent value="90" title="SQL инъекции"/>
+            <ProgressBarComponent value="50" title="RCE/эксплойты"/>
+            <ProgressBarComponent value="90" title="LFI/RFI/PHP-инъекции"/>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="col">
+            <div class="col-title">Кэш</div>
+            <ProgressBarComponent value="99" title="Redis"/>
+            <ProgressBarComponent value="99" title="Memcached"/>
+          </div>
+          <div class="col">
+            <div class="col-title">Авторизация</div>
+            <ProgressBarComponent value="99" title="JWT"/>
+            <ProgressBarComponent value="99" title="JWE"/>
+            <ProgressBarComponent value="99" title="OAuth"/>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="col">
+            <div class="col-title">Шифрование/хеширование</div>
+            <ProgressBarComponent value="99" title="MD5"/>
+            <ProgressBarComponent value="99" title="AES"/>
+            <ProgressBarComponent value="99" title="RSA"/>
+            <ProgressBarComponent value="99" title="BCrypt"/>
+            <ProgressBarComponent value="99" title="Argon2"/>
+          </div>
+          <div class="col">
+            <div class="col-title">ИИ</div>
+            <ProgressBarComponent value="99" title="ChatGpt"/>
+            <ProgressBarComponent value="99" title="DeepSeek"/>
+            <ProgressBarComponent value="99" title="Kandinsky"/>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="col">
+            <div class="col-title">Postgres</div>
+            <ProgressBarComponent value="99" title="Типы"/>
+            <ProgressBarComponent value="99" title="Ключи/индексы"/>
+            <ProgressBarComponent value="99" title="PostGIS"/>
+            <ProgressBarComponent value="99" title="Построение структуры"/>
+            <ProgressBarComponent value="99" title="Представления"/>
+            <ProgressBarComponent value="99" title="Процедуры/функции"/>
+            <ProgressBarComponent value="99" title="Тригеры"/>
+            <ProgressBarComponent value="99" title="Жадная загрузка"/>
+          </div>
+          <div class="col">
+            <div class="col-title">PHP</div>
+            <ProgressBarComponent value="99" title="ООП"/>
+            <ProgressBarComponent value="99" title="DDD"/>
+            <ProgressBarComponent value="99" title="Callback функции"/>
+            <ProgressBarComponent value="99" title="Паттерны проектирования"/>
+            <ProgressBarComponent value="99" title="Рефлексия"/>
+            <ProgressBarComponent value="99" title="APCu"/>
+            <ProgressBarComponent value="99" title="MVC"/>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="col">
+            <div class="col-title">Битрикс24/Битрикс</div>
+            <ProgressBarComponent value="99" title="Шаблоны"/>
+            <ProgressBarComponent value="99" title="Компоненты"/>
+            <ProgressBarComponent value="99" title="Модули"/>
+            <ProgressBarComponent value="99" title="Rest API"/>
+            <ProgressBarComponent value="99" title="Кэширование"/>
+            <ProgressBarComponent value="99" title="Инфоблоки"/>
+            <ProgressBarComponent value="99" title="HighLoad блоки"/>
+            <ProgressBarComponent value="99" title="ORM"/>
+            <ProgressBarComponent value="99" title="D7"/>
+            <ProgressBarComponent value="95" title="LDAP"/>
+            <ProgressBarComponent value="95" title="Push/pull"/>
+            <ProgressBarComponent value="95" title="Прямая работа с БД"/>
+          </div>
+          <div class="col">
+            <div class="col-title">Другое</div>
+            <ProgressBarComponent value="99" title="Git"/>
+            <ProgressBarComponent value="70" title="LDAP"/>
+            <ProgressBarComponent value="80" title="SOAP/XML"/>
+            <ProgressBarComponent value="60" title="Comet"/>
+            <ProgressBarComponent value="99" title="PhpUnit"/>
+            <ProgressBarComponent value="75" title="Linux"/>
+            <ProgressBarComponent value="99" title="Трекеры задач"/>
+            <ProgressBarComponent value="99" title="Изучение новых технологий"/>
+          </div>
+        </div>
+      </template>
+    </SkillsBlockComponent>
   </BlockInfoComponent>
 
   <BlockInfoComponent id="#works">
@@ -215,6 +325,7 @@ a {
 .columns {
   display: flex;
   margin-bottom: 15px;
+  width: 100%;
 
   .col {
     .col-title {
