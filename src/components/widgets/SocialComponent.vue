@@ -11,6 +11,7 @@ export default {
     <a href="https://kwork.ru/user/456un" class="kwork"></a>
     <a href="https://www.fl.ru/users/456un/portfolio/" class="fl"></a>
     <a href="https://freelance.ru/AnSm" class="freelance"></a>
+    <a href="https://github.com/456un" class="git"></a>
   </div>
 </template>
 
@@ -46,6 +47,11 @@ export default {
 
       &.freelance {
         background: transparent url("@/assets/img/freelance.png") no-repeat center center;
+        background-size: 35px 35px;
+      }
+
+      &.git {
+        background: transparent url("@/assets/img/git.png") no-repeat center center;
         background-size: 35px 35px;
       }
     }
