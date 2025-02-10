@@ -4,7 +4,7 @@ import SocialComponent from "@/components/widgets/SocialComponent.vue";
 export default {
   name: "PhotoComponent",
   components: {
-    SocialComponent
+    SocialComponent,
   }
 }
 </script>

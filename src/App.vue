@@ -1,6 +1,7 @@
 <script setup>
 import HeaderComponent from '@/components/layout/HeaderComponent.vue'
 import PhotoComponent from '@/components/layout/PhotoComponent.vue'
+import DownloadSkillsComponent from "@/components/widgets/DownloadSkillsComponent.vue";
 </script>
 
 <template>
@@ -8,8 +9,9 @@ import PhotoComponent from '@/components/layout/PhotoComponent.vue'
     <HeaderComponent></HeaderComponent>
     <main>
       <div id="app-content">
-        <div class="photo">
+        <div class="right-block">
           <PhotoComponent/>
+          <DownloadSkillsComponent/>
         </div>
         <div class="content">
           <RouterView/>
@@ -48,7 +50,7 @@ main {
         margin-left: 0;
       }
 
-      .photo {
+      .right-block {
         display: none;
       }
     }

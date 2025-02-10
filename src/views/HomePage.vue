@@ -9,6 +9,7 @@ import SocialComponent from "@/components/widgets/SocialComponent.vue";
 import ContactComponent from "@/components/widgets/ContactComponent.vue";
 import PhotoComponent from "@/components/layout/PhotoComponent.vue";
 import SkillsBlockComponent from "@/components/widgets/SkillsBlockComponent.vue";
+import DownloadSkillsComponent from "@/components/widgets/DownloadSkillsComponent.vue";
 
 export default {
   name: "HomePage.vue",
@@ -23,6 +24,7 @@ export default {
     SocialComponent,
     ContactComponent,
     SkillsBlockComponent,
+    DownloadSkillsComponent,
   }
 }
 </script>
@@ -30,6 +32,7 @@ export default {
 <template>
   <BlockInfoComponent class="no-padding top-block" id="#photo">
     <PhotoComponent class="photo-top"/>
+    <DownloadSkillsComponent class="download-skills-top"/>
   </BlockInfoComponent>
   <BlockInfoComponent id="#about">
     <h2 class="title">Про меня</h2>
@@ -400,6 +403,12 @@ a {
 @media (max-width: 768px) {
   .top-block {
     display: block;
+    background: transparent;
+  }
+
+  .download-skills-top {
+    width: calc(100% + 40px);
+    margin-bottom: 50px;
   }
 
   .columns {
