@@ -19,6 +19,9 @@ export default {
   display: flex;
   flex-direction: column;
   margin: 25px auto 0 auto;
+  background: #313C42;
+  border-radius: 8px;
+  padding: 15px 20px;
 
   .btn-title {
     text-align: center;

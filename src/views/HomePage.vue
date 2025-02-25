@@ -284,7 +284,7 @@ export default {
     <h2 class="title">FAQ</h2>
     <FaqComponent question="Сколько стоят мои услуги?">
       Верстка/фронт: 2000 руб/ч.<br>
-      Бэкенд: 3000 руб/ч.
+      Бэкенд: 2700 руб/ч.
     </FaqComponent>
     <FaqComponent question="Сколько стоит прямая интеграция с платежной системой?">
       MVP (минимально жизнеспособный продукт) стоит от 100к рублей, в зависимости от требований
@@ -407,7 +407,7 @@ a {
   }
 
   .download-skills-top {
-    width: calc(100% + 40px);
+    width: 100%;
     margin-bottom: 50px;
   }
 
