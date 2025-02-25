@@ -82,7 +82,7 @@ export default {
     text-align: justify;
 
     &.open {
-      max-height: 1000px;
+      max-height: 5000px;
       opacity: 1;
       padding-bottom: 15px;
     }
