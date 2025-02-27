@@ -157,6 +157,7 @@ export default {
             <ProgressBarComponent value="99" title="Рефлексия"/>
             <ProgressBarComponent value="99" title="APCu"/>
             <ProgressBarComponent value="99" title="MVC"/>
+            <ProgressBarComponent value="80" title="Swoole"/>
           </div>
         </div>
         <div class="columns">
