@@ -7,7 +7,6 @@ export default {
 <template>
   <div class="social-links">
     <a href="https://t.me/AnSm456un" class="telegram"></a>
-    <a href="https://freelance.habr.com/freelancers/456un" class="habr"></a>
     <a href="https://kwork.ru/user/456un" class="kwork"></a>
     <a href="https://www.fl.ru/users/456un/portfolio/" class="fl"></a>
     <a href="https://freelance.ru/AnSm" class="freelance"></a>
