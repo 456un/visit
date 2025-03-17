@@ -3,8 +3,14 @@ import HomePage from '@/views/HomePage.vue';
 import BlogPage from "@/views/BlogPage.vue";
 
 const routes = [
-    {path: '/', component: HomePage},
-    {path: '/blog', component: BlogPage},
+    {
+        path: '/',
+        component: HomePage,
+    },
+    {
+        path: '/blog',
+        component: BlogPage,
+    },
 ];
 
 const router = createRouter({

@@ -10,9 +10,49 @@ import ContactComponent from "@/components/widgets/ContactComponent.vue";
 import PhotoComponent from "@/components/layout/PhotoComponent.vue";
 import SkillsBlockComponent from "@/components/widgets/SkillsBlockComponent.vue";
 import DownloadSkillsComponent from "@/components/widgets/DownloadSkillsComponent.vue";
+import {useHead} from "@vueuse/head";
 
 export default {
   name: "HomePage.vue",
+  setup() {
+    useHead({
+      title: "Fullstack разработчик Владислав Сенников – Разработка, интеграция, оптимизация",
+      meta: [
+        {
+          name: "description",
+          content: "Владислав Сенников – профессиональный fullstack разработчик. Разработка и интеграция веб-приложений на PHP, Go, Vue, Laravel и PostgreSQL.",
+        },
+        {
+          property: "keywords",
+          content: "fullstack разработчик, PHP, Go, PostgreSQL, Laravel, Vue, веб-разработка, интеграция сервисов",
+        },
+        {
+          property: "canonical",
+          content: "https://dev-node.ru/",
+        },
+        {
+          property: "og:title",
+          content: "Fullstack разработчик Владислав Сенников",
+        },
+        {
+          property: "og:description",
+          content: "Разработка и поддержка высоконагруженных систем. Интеграция сервисов, бэкенд на Go и PHP.",
+        },
+        {
+          property: "og:image",
+          content: "https://dev-node.ru/assets/img/avatar.jpg",
+        },
+        {
+          property: "og:url",
+          content: "https://dev-node.ru/",
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+      ]
+    });
+  },
   components: {
     PhotoComponent,
     BlockInfoComponent,
@@ -291,13 +331,15 @@ export default {
       <ol>
         <li>
           <p>Фокусированное рабочее время</p>
-          <p>Разработчик на фуллтайме продуктивно работает над задачами в среднем 3-4 часа в день. Остальное время уходит на:</p>
+          <p>Разработчик на фуллтайме продуктивно работает над задачами в среднем 3-4 часа в день. Остальное время
+            уходит на:</p>
           <ul>
             <li>Разбор требований и обсуждения</li>
             <li>Взаимодействие с командой/клиентом</li>
             <li>Контекстные переключения между задачами</li>
           </ul>
-          <p>Это естественный процесс, подтвержденный исследованиями продуктивности: мозг не может работать на пике 8 часов подряд.</p>
+          <p>Это естественный процесс, подтвержденный исследованиями продуктивности: мозг не может работать на пике 8
+            часов подряд.</p>
         </li>
         <li>
           <p>Гибкость почасовой работы</p>
@@ -317,7 +359,8 @@ export default {
             <li>Социальные гарантии и налоги</li>
             <li>Простои и неэффективное время в рабочем процессе</li>
           </ul>
-          <p>В почасовой работе этого нет, но ставка компенсирует непредсказуемость загрузки и необходимость самостоятельно обеспечивать себя работой.</p>
+          <p>В почасовой работе этого нет, но ставка компенсирует непредсказуемость загрузки и необходимость
+            самостоятельно обеспечивать себя работой.</p>
         </li>
       </ol>
       <p>Почасовая ставка = чистое время работы над задачей, а фуллтайм включает неэффективные периоды работы.
