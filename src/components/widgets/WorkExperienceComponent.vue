@@ -40,6 +40,10 @@ export default {
 @media (max-width: 768px) {
   .work-experience {
     margin-left: 0;
+
+    .work-experience-box {
+      width: calc(100% - 183px);
+    }
   }
 }
 </style>

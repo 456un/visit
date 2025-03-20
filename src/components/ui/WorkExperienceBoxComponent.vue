@@ -49,4 +49,24 @@ export default {
     font-size: .875em;
   }
 }
+
+@media (max-width: 768px) {
+  .work-experience {
+    .work-experience-box {
+      padding: 6px 20px 40px 20px;
+
+      .work-experience-title {
+        font-size: 17px;
+      }
+
+      .work-experience-place {
+        font-size: 14px;
+      }
+
+      .work-experience-description {
+        font-size: 12px;
+      }
+    }
+  }
+}
 </style>

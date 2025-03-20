@@ -55,4 +55,11 @@ export default {
     z-index: 1;
   }
 }
+
+@media (max-width: 768px) {
+  .years-component {
+    width: 120px;
+    font-size: 12px;
+  }
+}
 </style>
