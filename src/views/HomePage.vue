@@ -247,7 +247,7 @@ export default {
 
     <WorkExperienceComponent startYear="2014" endYear="2015" title="Web-программист" place="Веб-студия WSDV">
       <p>Разработка сайтов на 1C-Битрикс
-        (например: <a href="http://www.ecodomprom.ru/">http://www.ecodomprom.ru/</a>), прямая работа с заказчиком.</p>
+        (например: <a href="http://www.ecodomprom.ru/">ecodomprom.ru</a>), прямая работа с заказчиком.</p>
       <p>Создание сайтов визиток.</p>
     </WorkExperienceComponent>
 
@@ -324,8 +324,8 @@ export default {
   <BlockInfoComponent id="#faq">
     <h2 class="title">FAQ</h2>
     <FaqComponent question="Сколько стоят мои услуги?">
-      Верстка/фронт: 2000 руб/ч.<br>
-      Бэкенд: 2700 руб/ч.
+      Верстка/фронт: 2500 руб/ч.<br>
+      Бэкенд: 3000 руб/ч.
     </FaqComponent>
     <FaqComponent question="Почему почасовая ставка не рассчитывается как 8ч * ставка?">
       <ol>
