@@ -78,12 +78,18 @@ export default {
     <h2 class="title">Про меня</h2>
     <div class="content">
       <p>Добрый день! Меня зовут Владислав Сенников, я профессиональный web-разработчик с более чем 11-летним
-        коммерческим
-        опытом.</p>
-      <p>Я специализируюсь на создании и поддержке высоконагруженных систем, интеграции сервисов и улучшении
-        существующих
-        решений. Имею большой опыт построения сервисов, с нуля, по требованиям заказчика.</p>
-      <p>Основные технологии: Go, PHP, Postgres, Laravel, Yii2, Symfony, Vue и др.</p>
+        коммерческим опытом.</p>
+      <p>Я специализируюсь на создании и поддержке высоконагруженных систем, написании и интеграции сервисов, оптимизации
+        существующих решений, перестройке архитектуры сервисов, чищу код который написан ИИ. Имею большой опыт написания
+        сервисов с нуля.</p>
+      <p>Основные технологии: Go, PHP, Postgres, Laravel, Yii2, Vue и др.</p>
+      <p>Ищу клиентов для постоянного сотрудничества. Есть возможность работы с юр. лицами.</p>
+      <p>Не работаю со срочными заказами.</p>
+      <p>Ставка:</p>
+      <ul>
+        <li>Backend (написание кода на стороне сервера): 3000 руб/ч.</li>
+        <li>Frontend/Верстка/Администрирование сервера и другое: 2500 руб/ч.</li>
+      </ul>
     </div>
   </BlockInfoComponent>
 
@@ -96,14 +102,14 @@ export default {
             <div class="col-title">Языки</div>
             <ProgressBarComponent value="99" title="PHP"/>
             <ProgressBarComponent value="75" title="Go"/>
-            <ProgressBarComponent value="80" title="Чистый JS"/>
+            <ProgressBarComponent value="90" title="Чистый JS"/>
             <ProgressBarComponent value="50" title="Vue"/>
             <ProgressBarComponent value="30" title="Python"/>
           </div>
           <div class="col">
             <div class="col-title">Базы данных</div>
             <ProgressBarComponent value="99" title="Postgres"/>
-            <ProgressBarComponent value="95" title="MySQL/MariaDB"/>
+            <ProgressBarComponent value="99" title="MySQL/MariaDB"/>
             <ProgressBarComponent value="80" title="MongoDB"/>
             <ProgressBarComponent value="70" title="Couchbase"/>
             <ProgressBarComponent value="60" title="MSSQL"/>
@@ -117,7 +123,7 @@ export default {
             <ProgressBarComponent value="99" title="Yii2"/>
             <ProgressBarComponent value="80" title="Symfony"/>
             <ProgressBarComponent value="99" title="Битрикс24/Битрикс"/>
-            <ProgressBarComponent value="90" title="Slim"/>
+            <ProgressBarComponent value="99" title="Slim"/>
             <ProgressBarComponent value="30" title="Django"/>
           </div>
           <div class="col">
@@ -172,6 +178,7 @@ export default {
           <div class="col">
             <div class="col-title">ИИ</div>
             <ProgressBarComponent value="99" title="ChatGpt"/>
+            <ProgressBarComponent value="99" title="Grok"/>
             <ProgressBarComponent value="99" title="DeepSeek"/>
             <ProgressBarComponent value="99" title="Kandinsky"/>
           </div>
@@ -216,6 +223,16 @@ export default {
             <ProgressBarComponent value="95" title="Push/pull"/>
             <ProgressBarComponent value="95" title="Прямая работа с БД"/>
           </div>
+          <div class="col">
+            <div class="col-title">Работа с изображениями</div>
+            <ProgressBarComponent value="99" title="Квантование изображений через код"/>
+            <ProgressBarComponent value="90" title="PHP GZ"/>
+            <ProgressBarComponent value="80" title="PHP imagick"/>
+            <ProgressBarComponent value="50" title="Go OpenCV"/>
+            <ProgressBarComponent value="30" title="Go YOLO"/>
+          </div>
+        </div>
+        <div class="columns">
           <div class="col">
             <div class="col-title">Другое</div>
             <ProgressBarComponent value="99" title="Git"/>
@@ -323,10 +340,6 @@ export default {
 
   <BlockInfoComponent id="#faq">
     <h2 class="title">FAQ</h2>
-    <FaqComponent question="Сколько стоят мои услуги?">
-      Верстка/фронт: 2500 руб/ч.<br>
-      Бэкенд: 3000 руб/ч.
-    </FaqComponent>
     <FaqComponent question="Почему почасовая ставка не рассчитывается как 8ч * ставка?">
       <ol>
         <li>
@@ -353,7 +366,7 @@ export default {
         </li>
         <li>
           <p>Ставка учитывает рыночные условия</p>
-          <p>Наем фуллтайм-разработчика включает</p>
+          <p>Наем fulltime разработчика включает</p>
           <ul>
             <li>Выплаты за нерабочее время (отпуска, больничные)</li>
             <li>Социальные гарантии и налоги</li>
@@ -363,15 +376,17 @@ export default {
             самостоятельно обеспечивать себя работой.</p>
         </li>
       </ol>
-      <p>Почасовая ставка = чистое время работы над задачей, а фуллтайм включает неэффективные периоды работы.
-        Поэтому в пересчёте на результат почасовой оплаты, разработчик может быть даже выгоднее.</p>
+      <p>Почасовая ставка = чистое время работы над задачей, а fulltime включает неэффективные периоды работы.
+        Поэтому в пересчёте на результаты почасовой оплаты, фриланс разработчик выгоднее fulltime разработчика.</p>
     </FaqComponent>
     <FaqComponent question="Сколько стоит прямая интеграция с платежной системой?">
       MVP (минимально жизнеспособный продукт) стоит от 100к рублей, в зависимости от требований
     </FaqComponent>
     <FaqComponent question="Конфиденциальность">
       Ваши проекты не будут добавлены в портфолио, без согласования с вами.<br>
-      Так же проект не будет упоминаться в личных переписках, без вашего согласия.
+      Так же проект не будет упоминаться в личных переписках, без вашего согласия.<br>
+      Код проекта не подлежит разглашению.<br>
+      При необходимости заключается NDA договор.<br>
     </FaqComponent>
   </BlockInfoComponent>
 

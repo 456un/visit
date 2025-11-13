@@ -7,9 +7,7 @@ export default {
 <template>
   <div class="social-links">
     <a href="https://t.me/AnSm456un" class="telegram"></a>
-    <a href="https://kwork.ru/user/456un" class="kwork"></a>
-    <a href="https://www.fl.ru/users/456un/portfolio/" class="fl"></a>
-    <a href="https://freelance.ru/AnSm" class="freelance"></a>
+    <a href="mailto:456unansm@gmail.com" class="email"></a>
     <a href="https://github.com/456un" class="git"></a>
   </div>
 </template>
@@ -26,6 +24,11 @@ export default {
 
       &.telegram {
         background: transparent url("@/assets/img/telegram.png") no-repeat center center;
+        background-size: 20px 20px;
+      }
+
+      &.email {
+        background: transparent url("@/assets/img/email.png") no-repeat center center;
         background-size: 20px 20px;
       }
 

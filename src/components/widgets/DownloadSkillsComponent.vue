@@ -16,7 +16,8 @@ export default {
 
 <style scoped lang="scss">
 .download-skills {
-  display: flex;
+  //display: flex;
+  display: none;
   flex-direction: column;
   margin: 25px auto 0 auto;
   background: #313C42;
