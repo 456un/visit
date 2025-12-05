@@ -5,6 +5,7 @@ import PhotoComponent from "@/components/layout/PhotoComponent.vue";
 import BlockInfoComponent from "@/components/widgets/BlockInfoComponent.vue";
 import ServiceComponent from "@/components/widgets/ServiceComponent.vue";
 import PostGisDecodeComponent from "@/components/widgets/servicesForm/PostGisDecodeComponent.vue";
+import PostGisEncodeComponent from "@/components/widgets/servicesForm/PostGisEncodeComponent.vue";
 
 export default {
   name: "HomePage.vue",
@@ -53,6 +54,7 @@ export default {
     DownloadSkillsComponent,
     ServiceComponent,
     PostGisDecodeComponent,
+    PostGisEncodeComponent,
   }
 }
 </script>
@@ -67,6 +69,9 @@ export default {
     <ServiceComponent title="Кодировать/декодировать точку PostGIS (WKB HEX)">
       <template #decode>
         <PostGisDecodeComponent/>
+      </template>
+      <template #encode>
+        <PostGisEncodeComponent/>
       </template>
     </ServiceComponent>
   </div>
@@ -88,6 +93,7 @@ export default {
 
 .services {
   margin-top: 23px;
+  width: calc(100% + 40px);
 }
 
 h1 {

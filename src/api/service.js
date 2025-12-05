@@ -19,3 +19,13 @@ export const decodePostGisHexWkb = async (data) => {
         throw 'ошибка отправки данных';
     }
 };
+
+// encode post gis hex wkb
+export const encodePostGisHexWkb = async (data) => {
+    try {
+        const response = await api.post('/api/service/postgis/encode', data);
+        return response.data; // Возвращаем данные ответа
+    } catch (error) {
+        throw 'ошибка отправки данных';
+    }
+};

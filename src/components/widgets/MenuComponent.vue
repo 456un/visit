@@ -31,7 +31,7 @@ export default {
       <RouterLink to="/" @click="hideMenu">Обо мне</RouterLink>
       <RouterLink to="/blog" :style="{display: 'none'}" @click="hideMenu">Блог</RouterLink>
       <RouterLink to="/service" @click="hideMenu">Сервисы</RouterLink>
-      <RouterLink to="/donate" @click="hideMenu">Поддержать</RouterLink>
+      <RouterLink to="/donate" :style="{display: 'none'}" @click="hideMenu">Поддержать</RouterLink>
     </div>
   </div>
 </template>
