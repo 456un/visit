@@ -36,7 +36,7 @@ export default {
 
   @media (max-width: 768px) {
     .right-container {
-      margin: 0 56px 0 10px;
+      margin: 0 10px 0 10px;
     }
   }
 </style>
