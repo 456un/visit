@@ -6,9 +6,10 @@ import BlockInfoComponent from "@/components/widgets/BlockInfoComponent.vue";
 import ServiceComponent from "@/components/widgets/ServiceComponent.vue";
 import PostGisDecodeComponent from "@/components/widgets/servicesForm/PostGisDecodeComponent.vue";
 import PostGisEncodeComponent from "@/components/widgets/servicesForm/PostGisEncodeComponent.vue";
+import ShaHashComponent from "@/components/widgets/servicesForm/ShaHashComponent.vue";
 
 export default {
-  name: "HomePage.vue",
+  name: "ServicePage.vue",
   setup() {
     useHead({
       title: "Fullstack разработчик Владислав Сенников – Разработка, интеграция, оптимизация",
@@ -55,6 +56,7 @@ export default {
     ServiceComponent,
     PostGisDecodeComponent,
     PostGisEncodeComponent,
+    ShaHashComponent,
   }
 }
 </script>
@@ -66,6 +68,11 @@ export default {
   </BlockInfoComponent>
   <h1>Сервисы</h1>
   <div class="services">
+    <ServiceComponent title="SHA хэширование (1-3) + HMAC (как доп. опция)" hideDecode="true">
+      <template #encode>
+        <ShaHashComponent/>
+      </template>
+    </ServiceComponent>
     <ServiceComponent title="Кодировать/декодировать точку PostGIS (WKB HEX)">
       <template #decode>
         <PostGisDecodeComponent/>

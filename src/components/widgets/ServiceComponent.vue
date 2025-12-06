@@ -13,6 +13,8 @@ export default {
   },
   props: [
       'title',
+      'hideDecode',
+      'hideEncode',
   ],
 }
 </script>
@@ -21,10 +23,10 @@ export default {
   <div class="service">
     <div class="title" :class="{open: open}" @click="toggle">{{ title }}</div>
     <div class="service-form" v-show="open">
-      <div class="form-decode">
+      <div class="form-decode" v-show="!hideDecode">
         <slot name="decode"></slot>
       </div>
-      <div class="form-encode">
+      <div class="form-encode" v-show="!hideEncode">
         <slot name="encode"></slot>
       </div>
     </div>

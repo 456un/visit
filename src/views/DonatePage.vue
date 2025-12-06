@@ -5,7 +5,7 @@ import PhotoComponent from "@/components/layout/PhotoComponent.vue";
 import BlockInfoComponent from "@/components/widgets/BlockInfoComponent.vue";
 
 export default {
-  name: "HomePage.vue",
+  name: "DonatePage.vue",
   setup() {
     useHead({
       title: "Fullstack разработчик Владислав Сенников – Разработка, интеграция, оптимизация",
