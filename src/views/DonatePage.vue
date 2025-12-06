@@ -58,6 +58,19 @@ export default {
     <PhotoComponent class="photo-top"/>
     <DownloadSkillsComponent class="download-skills-top"/>
   </BlockInfoComponent>
+  <h1>Поддержать</h1>
+  <div class="donate">
+    <div class="qr"></div>
+    <div class="sber">
+      <p>Поддержать автора и проект через Сбер</p>
+      <p>https://www.sberbank.com/sms/pbpn?requisiteNumber=79585687951</p>
+    </div>
+    <div class="bank-other">
+      <p>Для других банков</p>
+      <p>Карта: 2202 2032 6137 2454</p>
+      <p>Счет: 40817810877031890416</p>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -74,6 +87,53 @@ export default {
   width: 100%;
 }
 
+h1 {
+  font-size: 32px;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.donate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 58px;
+  width: 100%;
+
+  .qr {
+    width: 200px;
+    height: 200px;
+    background: transparent url("@/assets/img/donate-qr.png") no-repeat center center;
+    background-size: 200px 200px;
+  }
+
+  .sber, .bank-other {
+    word-break: break-all;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      margin: 0;
+    }
+
+    p:not(:first-child) {
+      margin-top: 3px;
+    }
+  }
+
+  .sber {
+    margin-top: 13px;
+  }
+
+  .bank-other {
+    margin-top: 30px;
+  }
+}
+
 @media (max-width: 768px) {
   .top-block {
     display: block;
@@ -85,17 +145,8 @@ export default {
     margin-bottom: 50px;
   }
 
-  .columns {
-    display: block;
-
-    .col {
-      width: auto;
-    }
-  }
-
-  .contact {
-    margin-left: 0;
-    margin-right: 0;
+  .donate {
+    width: calc(100% + 40px);
   }
 }
 </style>

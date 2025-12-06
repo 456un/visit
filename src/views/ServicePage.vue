@@ -93,7 +93,6 @@ export default {
 
 .services {
   margin-top: 23px;
-  width: calc(100% + 40px);
 }
 
 h1 {
@@ -115,17 +114,8 @@ h1 {
     margin-bottom: 50px;
   }
 
-  .columns {
-    display: block;
-
-    .col {
-      width: auto;
-    }
-  }
-
-  .contact {
-    margin-left: 0;
-    margin-right: 0;
+  .services {
+    width: calc(100% + 40px);
   }
 }
 </style>
