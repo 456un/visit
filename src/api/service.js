@@ -29,3 +29,13 @@ export const encodePostGisHexWkb = async (data) => {
         throw 'ошибка отправки данных';
     }
 };
+
+// sha + hmac hash
+export const shaHash = async (data) => {
+    try {
+        const response = await api.post('/api/service/sha/hash', data);
+        return response.data; // Возвращаем данные ответа
+    } catch (error) {
+        throw 'ошибка отправки данных';
+    }
+};

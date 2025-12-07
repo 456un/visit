@@ -1,9 +1,11 @@
 <script>
 export default {
   name: "SelectCustomComponent",
+  emits: ['updateValue'],
   props: [
     'selectName',
     'selectDefault',
+    'isDisabled',
   ],
   methods: {},
   mounted() {
@@ -16,6 +18,10 @@ export default {
 
     customSelect.addEventListener("click", () => {
       if (selectList.classList.contains('hide')) {
+        if (this.isDisabled) {
+          return false;
+        }
+
         selectList.classList.remove('hide');
       } else {
         selectList.classList.add('hide');
@@ -31,14 +37,22 @@ export default {
         customSelect.innerText = option.innerText;
         customSelect.dataset.value = option.dataset.value;
         selectList.classList.add('hide');
+
+        this.$emit('updateValue', customSelect.dataset.value);
       });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!selectList.contains(e.target) && !customSelect.contains(e.target)) {
+        selectList.classList.add('hide');
+      }
     });
   },
 }
 </script>
 
 <template>
-  <div class="select-wrapper">
+  <div class="select-wrapper" :class="{'disabled': isDisabled}">
     <div class="select-custom" :data-name="selectName"></div>
     <div class="list hide" :data-name="selectName">
       <slot name="option"></slot>
@@ -50,12 +64,10 @@ export default {
 .select-wrapper {
   position: relative;
   width: calc(100% - 142px);
-
-  select {
-    display: none;
-  }
+  display: flex;
 
   .select-custom {
+    width: 100%;
     margin-top: 11px;
     color: black;
     outline: none;
@@ -67,6 +79,14 @@ export default {
     font-size: 16px;
     height: fit-content;
     cursor: pointer;
+  }
+
+  &.disabled {
+    .select-custom {
+      background: url("@/assets/img/arrow-select.png") no-repeat center right 14px, #A4A4A4;
+      background-size: 15px 12px, 100% 100%;
+      cursor: not-allowed;
+    }
   }
 
   :deep(.list) {

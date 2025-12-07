@@ -7,7 +7,11 @@
   display: flex;
 }
 
-input[type="text"], .select-custom {
+.group {
+  margin-top: 24px;
+}
+
+input[type="text"] {
   margin-top: 11px;
   color: black;
   outline: none;
@@ -25,6 +29,11 @@ input[type="text"], .select-custom {
 
   &::placeholder {
     color: black;
+  }
+
+  &:disabled {
+    background: #A4A4A4;
+    cursor: not-allowed;
   }
 }
 
