@@ -22,7 +22,7 @@ export default {
     <a class="wrapper-hover" :href="link" target="_blank" rel="noopener noreferrer">
       <div class="wrapper-left-block"></div>
       <div class="wrapper-right-block">
-        <div class="label">смотреть дизайн</div>
+        <div class="label">к дизайну</div>
       </div>
     </a>
   </div>
