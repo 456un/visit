@@ -113,10 +113,7 @@ export default {
 
 <template>
   <div class="label">Получить хэш</div>
-  <div class="top-input">
-    <TextAreaCustomComponent place="Строка для хэширования" areaName="data" @updateValue="data=$event"/>
-    <input type="button" value="ВЫЧИСЛИТЬ" @click="hash" />
-  </div>
+  <TextAreaCustomComponent place="Строка для хэширования" areaName="data" @updateValue="data=$event"/>
   <SelectCustomComponent @updateValue="algo=$event" selectName="algo" selectDefault="sha256">
     <template #option>
       <div class="option" data-value="sha1">SHA1</div>
@@ -154,6 +151,7 @@ export default {
       <span class="red">Error:</span> {{ error }}
     </div>
   </div>
+  <input type="button" value="ВЫЧИСЛИТЬ" @click="hash" />
 </template>
 
 <style scoped lang="scss">

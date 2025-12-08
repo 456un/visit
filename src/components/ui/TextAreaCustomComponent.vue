@@ -32,7 +32,7 @@ export default {
 <style scoped lang="scss">
 .wrapper-textarea {
   position: relative;
-  width: calc(100% - 142px);
+  width: 100%;
   margin-top: 11px;
   display: flex;
 

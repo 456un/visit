@@ -54,10 +54,7 @@ export default {
 
 <template>
   <div class="label">Декодировать</div>
-  <div class="top-input">
-    <input type="text" name="wkbHex" placeholder="HEX WKB (значение точки для PostGIS): 0101000020E6...">
-    <input type="button" name="decode" value="ВЫЧИСЛИТЬ" @click="decode" />
-  </div>
+  <input type="text" name="wkbHex" placeholder="HEX WKB (значение точки для PostGIS): 0101000020E6...">
   <div class="result">
     <div class="success" v-show="!isError">
       <p>Долгота (lon): {{ lon }}</p>
@@ -67,6 +64,7 @@ export default {
       <span class="red">Error:</span> {{ error }}
     </div>
   </div>
+  <input type="button" name="decode" value="ВЫЧИСЛИТЬ" @click="decode" />
 </template>
 
 <style scoped lang="scss">

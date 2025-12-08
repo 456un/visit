@@ -63,7 +63,7 @@ export default {
 <style scoped lang="scss">
 .select-wrapper {
   position: relative;
-  width: calc(100% - 142px);
+  width: 100%;
   display: flex;
 
   .select-custom {

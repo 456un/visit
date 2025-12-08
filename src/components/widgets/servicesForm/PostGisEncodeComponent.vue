@@ -53,10 +53,7 @@ export default {
 
 <template>
   <div class="label">Кодировать</div>
-  <div class="top-input">
-    <input type="text" name="lon" placeholder="Долгота (lon): 12.121545">
-    <input type="button" name="decode" value="ВЫЧИСЛИТЬ" @click="encode" />
-  </div>
+  <input type="text" name="lon" placeholder="Долгота (lon): 12.121545">
   <input type="text" name="lat" placeholder="Широта (lat): 35.4546546">
   <div class="result">
     <div class="success" v-show="!isError">
@@ -66,6 +63,7 @@ export default {
       <span class="red">Error:</span> {{ error }}
     </div>
   </div>
+  <input type="button" name="decode" value="ВЫЧИСЛИТЬ" @click="encode" />
 </template>
 
 <style scoped lang="scss">

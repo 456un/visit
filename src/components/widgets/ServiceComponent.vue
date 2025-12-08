@@ -44,9 +44,9 @@ export default {
     border-radius: 8px;
     display: flex;
     align-items: center;
-    height: 42px;
-    width: calc(100% - 20px);
-    padding-left: 20px;
+    height: fit-content;
+    width: calc(100% - 40px);
+    padding: 10px 20px;
     cursor: pointer;
 
     &.open {
