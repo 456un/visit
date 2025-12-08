@@ -10,6 +10,7 @@ import ContactComponent from "@/components/widgets/ContactComponent.vue";
 import PhotoComponent from "@/components/layout/PhotoComponent.vue";
 import SkillsBlockComponent from "@/components/widgets/SkillsBlockComponent.vue";
 import DownloadSkillsComponent from "@/components/widgets/DownloadSkillsComponent.vue";
+import DesignComponent from "@/components/widgets/DesignComponent.vue";
 import {useHead} from "@vueuse/head";
 
 export default {
@@ -65,6 +66,7 @@ export default {
     ContactComponent,
     SkillsBlockComponent,
     DownloadSkillsComponent,
+    DesignComponent,
   }
 }
 </script>
@@ -89,6 +91,7 @@ export default {
       <ul>
         <li>Backend (написание кода на стороне сервера): 3000 руб/ч.</li>
         <li>Frontend/Верстка/Администрирование сервера и другое: 2500 руб/ч.</li>
+        <li>Дизайн (как хобби, только в свободное время): 500 руб/ч.</li>
       </ul>
     </div>
   </BlockInfoComponent>
@@ -336,6 +339,11 @@ export default {
         </PortfolioComponent>
       </div>
     </div>
+  </BlockInfoComponent>
+
+  <BlockInfoComponent id="#design">
+    <h2 class="title">Дизайн</h2>
+    <DesignComponent/>
   </BlockInfoComponent>
 
   <BlockInfoComponent id="#faq">
