@@ -22,7 +22,7 @@ export default {
     <a class="wrapper-hover" :href="link" target="_blank" rel="noopener noreferrer">
       <div class="wrapper-left-block"></div>
       <div class="wrapper-right-block">
-        <div class="label">к дизайну</div>
+        <div class="label">дизайн</div>
       </div>
     </a>
   </div>
@@ -71,6 +71,8 @@ export default {
       margin: auto 8px auto 0;
       font-size: 20px;
       color: white;
+      text-align: center;
+      width: calc(100% - 8px);
     }
   }
 
@@ -108,10 +110,10 @@ export default {
     .wrapper-right-block {
       position: relative;
       height: 100%;
-      width: calc(50% - 125px);
+      width: calc(50% - 90px);
       margin-left: 50%;
       padding-right: 75px;
-      padding-left: 50px;
+      padding-left: 15px;
       text-align: center;
       background: url("@/assets/img/design-arrow.png") no-repeat center right 15px, #1FA184;
       background-size: 50px 50px, 100% 100%;
