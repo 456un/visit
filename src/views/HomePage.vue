@@ -423,7 +423,7 @@ a {
 
 .content {
   line-height: 1.875em;
-  text-align: justify;
+  text-align: left;
   font-size: 16px;
   letter-spacing: .08em;
 }

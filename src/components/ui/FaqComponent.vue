@@ -19,7 +19,7 @@ export default {
 
 <template>
   <div class="faq">
-    <div class="question" @click="toggleAnswer">
+    <div class="question" @click="toggleAnswer" :class="{open: isOpen}">
       <div class="text">
         {{ question }}
       </div>
@@ -32,21 +32,26 @@ export default {
 
 <style scoped lang="scss">
 .faq {
-
   .question {
-    font-size: 14px;
-    line-height: 1.1;
+    font-size: 16px;
     cursor: pointer;
-    padding: 10px;
     position: relative;
-    background: #1FA184;
     border-radius: 8px;
     text-transform: uppercase;
     width: calc(100% - 20px);
+    background: url("@/assets/img/arrow-open.png") no-repeat center right 15px, #1FA184;
+    background-size:  15px 12px, 100% 100%;
+    padding: 10px 20px;
+    height: fit-content;
 
     .text {
       z-index: 2;
       position: relative;
+    }
+
+    &.open {
+      background: url("@/assets/img/arrow-close.png") no-repeat center right 15px, #1FA184;
+      background-size:  15px 12px, 100% 100%;
     }
 
     &:before {
@@ -59,14 +64,6 @@ export default {
       opacity: 0;
       transition: 0.3s opacity;
       border-radius: 8px;
-    }
-
-    &:hover {
-      &:before {
-        opacity: 1;
-        background: rgba(0, 0, 0, 0.3); /* Черный полупрозрачный слой */
-        z-index: 1;
-      }
     }
   }
 
