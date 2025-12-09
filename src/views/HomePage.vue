@@ -3,7 +3,6 @@ import BlockInfoComponent from '@/components/widgets/BlockInfoComponent.vue'
 import ProgressBarComponent from "@/components/ui/ProgressBarComponent.vue";
 import WorkExperienceComponent from "@/components/widgets/WorkExperienceComponent.vue";
 import ReviewComponent from "@/components/widgets/ReviewComponent.vue";
-import PortfolioComponent from "@/components/ui/PortfolioComponent.vue";
 import FaqComponent from "@/components/ui/FaqComponent.vue";
 import SocialComponent from "@/components/widgets/SocialComponent.vue";
 import ContactComponent from "@/components/widgets/ContactComponent.vue";
@@ -11,6 +10,7 @@ import PhotoComponent from "@/components/layout/PhotoComponent.vue";
 import SkillsBlockComponent from "@/components/widgets/SkillsBlockComponent.vue";
 import DownloadSkillsComponent from "@/components/widgets/DownloadSkillsComponent.vue";
 import DesignComponent from "@/components/widgets/DesignComponent.vue";
+import PortfolioComponent from "@/components/widgets/PortfolioComponent.vue";
 import {useHead} from "@vueuse/head";
 
 export default {
@@ -60,13 +60,13 @@ export default {
     ProgressBarComponent,
     WorkExperienceComponent,
     ReviewComponent,
-    PortfolioComponent,
     FaqComponent,
     SocialComponent,
     ContactComponent,
     SkillsBlockComponent,
     DownloadSkillsComponent,
     DesignComponent,
+    PortfolioComponent,
   }
 }
 </script>
@@ -321,24 +321,7 @@ export default {
 
   <BlockInfoComponent id="#portfolio">
     <h2 class="title">Портфолио</h2>
-    <div class="portfolio-columns">
-      <div class="portfolio-col">
-        <PortfolioComponent src="/assets/img/sso.jpg" class="portfolio-el" tabindex="1">
-          SOKOLOV ID<br>SSO
-        </PortfolioComponent>
-        <PortfolioComponent src="/assets/img/sokolov.jpg" class="portfolio-el" tabindex="2">
-          Сайт sokolov.ru
-        </PortfolioComponent>
-      </div>
-      <div class="portfolio-col">
-        <PortfolioComponent src="/assets/img/pay.jpg" class="portfolio-el" tabindex="3">
-          Платежный сервис<br>SOKOLOV
-        </PortfolioComponent>
-        <PortfolioComponent src="/assets/img/geo.jpg" class="portfolio-el" tabindex="4">
-          SOKOLOV<br>GEO
-        </PortfolioComponent>
-      </div>
-    </div>
+    <PortfolioComponent />
   </BlockInfoComponent>
 
   <BlockInfoComponent id="#design">
@@ -446,46 +429,6 @@ ul, ol {
 
     width: calc(50% - 30px);
     padding: 0 15px;
-  }
-}
-
-.portfolio-col {
-  display: flex;
-}
-
-.portfolio-col:first-child {
-  .portfolio-el:first-child {
-    border-top-left-radius: 8px;
-
-    &:before {
-      border-top-left-radius: 8px;
-    }
-  }
-
-  .portfolio-el:last-child {
-    border-top-right-radius: 8px;
-
-    &:before {
-      border-top-right-radius: 8px;
-    }
-  }
-}
-
-.portfolio-col:last-child {
-  .portfolio-el:first-child {
-    border-bottom-left-radius: 8px;
-
-    &:before {
-      border-bottom-left-radius: 8px;
-    }
-  }
-
-  .portfolio-el:last-child {
-    border-bottom-right-radius: 8px;
-
-    &:before {
-      border-bottom-right-radius: 8px;
-    }
   }
 }
 
