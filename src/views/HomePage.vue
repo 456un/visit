@@ -413,6 +413,10 @@ a {
   text-decoration: none;
 }
 
+ul, ol {
+  padding-left: 25px;
+}
+
 .title {
   text-transform: uppercase;
   font-size: 30px;
