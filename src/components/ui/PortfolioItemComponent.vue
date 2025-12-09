@@ -125,15 +125,17 @@ export default {
     z-index: 10;
   }
 
-  &.hover:hover {
-    .portfolio-item-left {
-      width: calc(100% - 42px - 118px);
-      margin-left: 118px;
-      border-radius: 0;
-    }
+  @media (hover: hover) {
+    &.hover:hover {
+      .portfolio-item-left {
+        width: calc(100% - 42px - 118px);
+        margin-left: 118px;
+        border-radius: 0;
+      }
 
-    .portfolio-item-right {
-      width: 42px;
+      .portfolio-item-right {
+        width: 42px;
+      }
     }
   }
 
@@ -169,7 +171,7 @@ export default {
 
   .desc-title {
     font-size: 16px;
-    padding: 21px 0 0 12px;
+    padding: 15px 0 0 12px;
   }
 
   .desc {
