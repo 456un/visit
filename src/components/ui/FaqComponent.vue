@@ -33,15 +33,15 @@ export default {
 <style scoped lang="scss">
 .faq {
   .question {
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     position: relative;
     border-radius: 8px;
     text-transform: uppercase;
-    width: calc(100% - 20px);
+    width: calc(100% - 50px);
     background: url("@/assets/img/arrow-open.png") no-repeat center right 15px, #1FA184;
     background-size:  15px 12px, 100% 100%;
-    padding: 10px 20px;
+    padding: 10px 30px 10px 20px;
     height: fit-content;
 
     .text {
@@ -76,7 +76,7 @@ export default {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    text-align: justify;
+    text-align: left;
 
     &.open {
       max-height: 5000px;
