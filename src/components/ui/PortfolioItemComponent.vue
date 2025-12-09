@@ -50,7 +50,7 @@ export default {
   .portfolio-item-hover-left,
   .portfolio-item-hover-left-wrapper,
   .portfolio-item-arrow-right {
-    transition: width .35s ease, margin-left .35s ease, border-radius .35s ease, opacity .35s ease, padding-right .35s ease;
+    transition: width .35s ease, margin-left .35s ease, border-radius .35s ease, opacity .35s ease, padding-right .35s ease, z-index .35s ease;
   }
 
   .portfolio-item-arrow-right {
@@ -151,6 +151,7 @@ export default {
     .portfolio-item-hover-left {
       border-radius: 0 8px 8px 0;
       margin-left: 42px;
+      z-index: 11;
     }
 
     .portfolio-item-left {
