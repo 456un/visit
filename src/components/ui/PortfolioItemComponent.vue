@@ -109,6 +109,11 @@ export default {
       background-size: 100px 100px, 100% 100%;
     }
 
+    &.bitrix24 {
+      background: url("@/assets/img/portfolio/bitrix24.png") no-repeat center left 18px, #1FA184;
+      background-size: 100px 100px, 100% 100%;
+    }
+
     .title {
       display: flex;
       margin: auto 65px auto 126px;

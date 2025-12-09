@@ -26,6 +26,10 @@ export default {
     Работа в продуктовой команде. Зона ответственности: авторизация, проведение оплат, корзина (checkout),
     прием и обработка заказов на сайте
   </PortfolioItemComponent>
+  <PortfolioItemComponent className="bitrix24" title="Портал (Битрикс)">
+    Доработка Битрикс24 для SOKOLOV. Прямые интеграции с 1С, написание собственных модулей,
+    доработка LDAP, внедрение функционала в обход ядра, исправление ошибок Битрикс24, прямая работа с БД
+  </PortfolioItemComponent>
 </template>
 
 <style scoped lang="scss">
