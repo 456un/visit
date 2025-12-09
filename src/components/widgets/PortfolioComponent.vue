@@ -11,16 +11,20 @@ export default {
 
 <template>
   <PortfolioItemComponent className="id" title="SOKOLOV ID (SSO)">
-    Описание
+    Мной с нуля реализован и внедрен центр единой авторизации SOKOLOV ID. Сервис разрабатывался как единая кроссдоменная
+    точка авторизации пользователей и сервисов SOKOLOV. Ближайшие аналоги: Сбер ID, Yandex ID, Google ID
   </PortfolioItemComponent>
   <PortfolioItemComponent className="geo" title="SOKOLOV GEO">
-    Описание
+    Мной принят от аутсорс и полностью переработан сервис GEO. Сервис необходим для обработки и поиска адресов, координат,
+    ближайших точек на карте от метки. Ближайший аналог: DaData
   </PortfolioItemComponent>
   <PortfolioItemComponent className="pay" title="Сервис оплат">
-    Описание
+    В команде разработан и внедрен сервис для управления онлайн оплатами, Проведена прямая интеграция с платежными системами и банками:
+    Сбер, Тинькофф, Тинькофф Долями, СБП, МКБ, PayKeeper, Apple Pay, Google Pay, Sber Pay. Открытых аналогов нет
   </PortfolioItemComponent>
   <PortfolioItemComponent className="jewerly" title="SOKOLOV">
-    Описание
+    Работа в продуктовой команде. Зона ответственности: авторизация, проведение оплат, корзина (checkout),
+    прием и обработка заказов на сайте
   </PortfolioItemComponent>
 </template>
 

@@ -41,7 +41,7 @@ export default {
   display: flex;
   margin-top: 32px;
   cursor: pointer;
-  height: 180px;
+  height: 200px;
   overflow: hidden;
   position: relative;
 
@@ -164,15 +164,16 @@ export default {
 
   .desc-title, .desc {
     color: white;
-    font-size: 16px;
     text-align: left;
   }
 
   .desc-title {
+    font-size: 16px;
     padding: 21px 0 0 12px;
   }
 
   .desc {
+    font-size: 14px;
     padding: 10px 12px;
   }
 }
