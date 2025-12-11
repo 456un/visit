@@ -259,13 +259,6 @@ export default {
     <WorkExperienceComponent />
   </BlockInfoComponent>
 
-<!--  <BlockInfoComponent id="#edicatons">-->
-<!--    <h2 class="title">Образование</h2>-->
-<!--    <WorkExperienceComponent startYear="2010" endYear="2015" title="Учитель информатики и математики"-->
-<!--                             place="КГУ им. Н.А. Некрасова">-->
-<!--    </WorkExperienceComponent>-->
-<!--  </BlockInfoComponent>-->
-
   <BlockInfoComponent id="#reviews">
     <h2 class="title">Отзывы</h2>
     <ReviewComponent name="Анна" link="https://freelance.ru/krinic">
@@ -399,8 +392,7 @@ ul, ol {
 }
 
 .contact {
-  margin-left: 8.6%;
-  margin-right: 8.6%;
+  margin: 0 40px;
 }
 
 .top-block {

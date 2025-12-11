@@ -23,23 +23,39 @@ export default {
       this.response = null;
       this.success = null;
 
-      if (!this.form.email && !this.form.telegram) {
+      const email = this.form.email;
+      const telegram = this.form.telegram;
+      const message = this.form.message;
+
+      const data = new FormData();
+
+      if (!email && !telegram) {
         this.error = 'Укажите email или телеграм для связи с вами';
         this.isSubmitting = false;
         this.success = false;
         return;
       }
 
-      if (this.form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.form.email)) {
+      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         this.error = 'Email не валиден';
         this.isSubmitting = false;
         this.success = false;
         return;
       }
 
+      if (email) {
+        data.set('email', email);
+      }
+
+      if (telegram) {
+        data.set('telegram', telegram);
+      }
+
+      data.set('message', message);
+
       try {
         // Отправка данных через API-сервис
-        this.response = await sendFormData(this.form); // Ответ от сервера
+        this.response = await sendFormData(data); // Ответ от сервера
         this.success = true;
       } catch (err) {
         // Обработка ошибок
@@ -57,16 +73,13 @@ export default {
   <form @submit.prevent="submitForm">
     <div class="contact-component">
       <div class="email form-el">
-        <label>Email</label>
-        <input type="text" name="email" v-model="form.email"/>
+        <input type="text" name="email" v-model="form.email" placeholder="Email: me@mail.ru" />
       </div>
       <div class="telegram form-el">
-        <label>Имя пользователя telegram</label>
-        <input type="text" name="telegram" v-model="form.telegram"/>
+        <input type="text" name="telegram" v-model="form.telegram" placeholder="Имя пользователя telegram: @me"/>
       </div>
       <div class="message form-el">
-        <label>Сообщение</label>
-        <textarea name="message" v-model="form.message"/>
+        <textarea name="message" v-model="form.message" placeholder="Опишите задачу"/>
       </div>
       <div class="form-block">
         <div class="error"><span>{{ error ? '* ' : '' }}</span>{{ error }}</div>
@@ -83,7 +96,7 @@ export default {
 
 <style scoped lang="scss">
 .contact-component {
-  margin-top: 70px;
+  margin-top: 30px;
 
   .form-el {
     display: flex;
@@ -96,16 +109,29 @@ export default {
     }
 
     input, textarea {
-      background-color: #121F26;
-      height: 20px;
-      padding: 10px 15px;
-      line-height: 20px;
-      font-size: 14px;
-      border: 1px solid transparent;
-      border-radius: 8px;
-      color: white;
-      margin-bottom: 20px;
+      margin-top: 11px;
+      color: black;
       outline: none;
+      border: none;
+      background: #B3DFD3;
+      border-radius: 8px;
+      padding: 10px 13px 9px 13px;
+      font-size: 16px;
+      width: calc(100% - 26px);
+      height: fit-content;
+
+      &:focus::placeholder {
+        color: transparent;
+      }
+
+      &::placeholder {
+        color: black;
+      }
+
+      &:disabled {
+        background: #A4A4A4;
+        cursor: not-allowed;
+      }
     }
 
     textarea {
@@ -117,9 +143,10 @@ export default {
     position: relative;
     display: flex;
     margin-left: auto;
-    margin-right: 0;
+    margin-right: auto;
     width: fit-content;
     height: fit-content;
+    margin-top: 20px;
 
     .spinner {
       position: absolute;
@@ -149,31 +176,36 @@ export default {
     }
 
     button {
-      color: #FFFFFF;
-      background-color: #1FA184;
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 1.2;
+      outline: none;
+      border: none;
+      background: black;
+      color: white;
+      font-size: 16px;
+      text-transform: uppercase;
+      border-radius: 8px;
+      cursor: pointer;
+      padding: 10px 14px 9px 14px;
+
       text-align: center;
       vertical-align: middle;
-      padding: 8px 25px;
-      border-radius: 35px;
-      border: none;
-      outline: none;
-      cursor: pointer;
       height: fit-content;
 
       &.dark {
-        background-color: #172d27;
-        color: #626262;
+        background-color: #333333;
       }
     }
   }
 
   .form-block {
     display: flex;
+    flex-direction: column;
+
+    .message {
+      margin-top: 8px;
+    }
 
     .error, .success {
+      margin-top: 8px;
       letter-spacing: 0.18em;
       font-size: 14px;
 
