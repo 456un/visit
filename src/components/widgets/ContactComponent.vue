@@ -76,7 +76,7 @@ export default {
         <input type="text" name="email" v-model="form.email" placeholder="Email: me@mail.ru" />
       </div>
       <div class="telegram form-el">
-        <input type="text" name="telegram" v-model="form.telegram" placeholder="Имя пользователя telegram: @me"/>
+        <input type="text" name="telegram" v-model="form.telegram" placeholder="Telegram: @me"/>
       </div>
       <div class="message form-el">
         <textarea name="message" v-model="form.message" placeholder="Опишите задачу"/>
