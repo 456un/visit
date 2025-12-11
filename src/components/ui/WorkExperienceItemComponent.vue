@@ -39,9 +39,9 @@ export default {
       z-index: 2;
       background: #1FA184;
       border-radius: 8px;
-      font-size: 16px;
-      width: 140px;
-      height: 30px;
+      font-size: 12px;
+      width: 112px;
+      height: 24px;
       align-items: center;
       justify-content: center;
       top: 21px;
@@ -49,7 +49,7 @@ export default {
     }
 
     .title {
-      font-size: 20px;
+      font-size: 18px;
       width: calc(100% - 172px);
     }
 
