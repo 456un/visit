@@ -13,7 +13,7 @@ export default {
 <style scoped lang="scss">
   .block-info {
     padding: 40px 35px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     background: #313C42;
     width: calc(100% - 70px);
     border-radius: 8px;

@@ -199,6 +199,7 @@ export default {
   .form-block {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     .message {
       margin-top: 8px;
