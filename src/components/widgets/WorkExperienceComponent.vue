@@ -48,7 +48,7 @@ export default {
       </WorkExperienceItemComponent>
 
       <WorkExperienceItemComponent startYear="2014" endYear="2015" title="Web-программист" place="Веб-студия WSDV">
-        <p>Разрабатывал сайты на 1С-Битрикс
+        <p>Разрабатывал и дорабатывал сайты на 1С-Битрикс
           (например: <a href="http://www.ecodomprom.ru/">ecodomprom.ru</a>).</p>
         <p>Реализовывал сайты визитки.</p>
       </WorkExperienceItemComponent>
