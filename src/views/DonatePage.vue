@@ -62,7 +62,7 @@ export default {
   <div class="donate">
     <div class="qr"></div>
     <div class="sber">
-      <p>Поддержать автора и проект через Сбер</p>
+      <p>Поддержать развитие сервисов через Сбер</p>
       <p>https://www.sberbank.com/sms/pbpn?requisiteNumber=79585687951</p>
     </div>
     <div class="bank-other">
@@ -115,6 +115,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
     p {
       margin: 0;

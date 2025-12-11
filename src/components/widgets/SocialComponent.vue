@@ -8,7 +8,6 @@ export default {
   <div class="social-links">
     <a href="https://t.me/AnSm456un" class="telegram"></a>
     <a href="mailto:456unansm@gmail.com" class="email"></a>
-    <a href="https://github.com/456un" class="git"></a>
   </div>
 </template>
 
@@ -16,6 +15,7 @@ export default {
   .social-links {
     display: flex;
     margin-top: 26px;
+    align-items: center;
 
     a {
       height: 20px;
@@ -28,8 +28,8 @@ export default {
       }
 
       &.email {
-        background: transparent url("@/assets/img/email.png") no-repeat center center;
-        background-size: 20px 20px;
+        background: transparent url("@/assets/img/email2.png") no-repeat top -4px center;
+        background-size: 25px 27px;
       }
 
       &.habr {
