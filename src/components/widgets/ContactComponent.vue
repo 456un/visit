@@ -73,10 +73,10 @@ export default {
   <form @submit.prevent="submitForm">
     <div class="contact-component">
       <div class="email form-el">
-        <input type="text" name="email" v-model="form.email" placeholder="Email: me@mail.ru" />
+        <input type="text" name="email" v-model="form.email" placeholder="Email: you@mail.ru" />
       </div>
       <div class="telegram form-el">
-        <input type="text" name="telegram" v-model="form.telegram" placeholder="Telegram: @me"/>
+        <input type="text" name="telegram" v-model="form.telegram" placeholder="Telegram: @you"/>
       </div>
       <div class="message form-el">
         <textarea name="message" v-model="form.message" placeholder="Опишите задачу"/>

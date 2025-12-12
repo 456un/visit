@@ -1,63 +1,32 @@
 <script>
+import ReviewItemComponent from "@/components/ui/ReviewItemComponent.vue";
+
 export default {
   name: "ReviewComponent",
-  props: [
-    'name',
-    'link',
-  ],
+  components: {
+    ReviewItemComponent,
+  },
 }
 </script>
 
 <template>
-  <div class="review-component">
-    <div class="review-avatar"></div>
-    <div class="review-content">
-      <a class="review-content-name" :href="link">{{ name }}</a>
-      <div class="review-text"><slot></slot></div>
-    </div>
-  </div>
+  <ReviewItemComponent name="Анна" link="https://freelance.ru/reviews/AnSm/" type="female">
+    Как всегда четко и профессионально!
+  </ReviewItemComponent>
+
+  <ReviewItemComponent name="Анна" link="https://freelance.ru/reviews/AnSm/" type="female">
+    Очень качественно выполненная работа! Исполнитель - профессионал и прекрасно разбирается в Битрикс!
+  </ReviewItemComponent>
+
+  <ReviewItemComponent name="Илья Кузнецов" link="https://freelance.ru/reviews/AnSm/" type="male">
+    Сделал все быстро и профессионально! Отлично!
+  </ReviewItemComponent>
+
+  <ReviewItemComponent name="iqcon" link="https://freelance.ru/reviews/AnSm/" type="male">
+    Работу выполнил хорошо, советую для сотрудничества!
+  </ReviewItemComponent>
 </template>
 
 <style scoped lang="scss">
-.review-component {
-  display: flex;
-  padding: 0 60px;
-  margin-bottom: 60px;
 
-  .review-avatar {
-    background: transparent url("@/assets/img/avatar.png") no-repeat center center;
-    background-size: 54px 54px;
-    width: 54px;
-    height: 54px;
-  }
-
-  .review-content {
-    display: flex;
-    flex-direction: column;
-    margin-left: 15px;
-    width: calc(100% - 74px);
-
-    .review-content-name {
-      line-height: 1.1;
-      font-size: .875em;
-      color: white;
-      text-transform: uppercase;
-      text-decoration: none;
-      margin-top: 10px;
-      margin-bottom: 15px;
-    }
-
-    .review-text {
-      font-size: .875em;
-      letter-spacing: 1px;
-      text-align: justify;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .review-component {
-    padding: 0 10px;
-  }
-}
 </style>

@@ -100,6 +100,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   margin-top: 58px;
+  margin-bottom: 50px;
   width: 100%;
 
   .qr {

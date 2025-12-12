@@ -261,21 +261,7 @@ export default {
 
   <BlockInfoComponent id="#reviews">
     <h2 class="title">Отзывы</h2>
-    <ReviewComponent name="Анна" link="https://freelance.ru/krinic">
-      Как всегда четко и профессионально!
-    </ReviewComponent>
-
-    <ReviewComponent name="Анна" link="https://freelance.ru/krinic">
-      Очень качественно выполненная работа! Исполнитель - профессионал и прекрасно разбирается в Битрикс!
-    </ReviewComponent>
-
-    <ReviewComponent name="Илья Кузнецов" link="https://freelance.ru/ilay-1">
-      Сделал все быстро и профессионально! Отлично!
-    </ReviewComponent>
-
-    <ReviewComponent name="iqcon" link="https://freelance.ru/iqcon">
-      Работу выполнил хорошо, советую для сотрудничества!
-    </ReviewComponent>
+    <ReviewComponent />
   </BlockInfoComponent>
 
   <BlockInfoComponent id="#portfolio">
