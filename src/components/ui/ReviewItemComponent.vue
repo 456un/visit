@@ -49,25 +49,24 @@ export default {
   }
 }
 
-//@media (max-width: 768px) {
-//  .review {
-//    padding: 10px 18px;
-//    width: calc(100% - 36px);
-//
-//    &.male {
-//      background: #141414;
-//      background-size: 100% 100%;
-//    }
-//
-//    &.female {
-//      background: #141414;
-//      background-size: 100% 100%;
-//    }
-//
-//    .desc {
-//      font-size: 12px;
-//      height: 53px;
-//    }
-//  }
-//}
+@media (max-width: 768px) {
+  .review {
+    padding: 10px 18px;
+    width: calc(100% - 36px);
+
+    &.male {
+      background: #141414;
+      background-size: 100% 100%;
+    }
+
+    &.female {
+      background: #141414;
+      background-size: 100% 100%;
+    }
+
+    .desc {
+      font-size: 12px;
+    }
+  }
+}
 </style>
