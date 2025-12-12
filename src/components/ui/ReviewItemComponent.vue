@@ -3,7 +3,6 @@ export default {
   name: "ReviewComponent",
   props: [
     'name',
-    'link',
     'type',
   ],
 }
@@ -13,7 +12,6 @@ export default {
   <div class="review" :class="type">
     <div class="name">{{ name }}</div>
     <div class="desc"><slot></slot></div>
-    <a class="view" :href="link" target="_blank" rel="noopener noreferrer">смотреть отзыв</a>
   </div>
 </template>
 
@@ -47,43 +45,29 @@ export default {
   .desc {
     font-size: 14px;
     margin-top: 8px;
-    height: 45px;
     overflow: hidden;
   }
-
-  .view {
-    font-size: 14px;
-    text-transform: lowercase;
-    padding-right: 16px;
-    cursor: pointer;
-    color: white;
-    text-decoration: none;
-    width: fit-content;
-    display: block;
-    background: transparent url("@/assets/img/review-arrow.png") no-repeat top 2px right;
-    background-size: 14px 14px;
-  }
 }
 
-@media (max-width: 768px) {
-  .review {
-    padding: 10px 18px;
-    width: calc(100% - 36px);
-
-    &.male {
-      background: #141414;
-      background-size: 100% 100%;
-    }
-
-    &.female {
-      background: #141414;
-      background-size: 100% 100%;
-    }
-
-    .desc {
-      font-size: 12px;
-      height: 53px;
-    }
-  }
-}
+//@media (max-width: 768px) {
+//  .review {
+//    padding: 10px 18px;
+//    width: calc(100% - 36px);
+//
+//    &.male {
+//      background: #141414;
+//      background-size: 100% 100%;
+//    }
+//
+//    &.female {
+//      background: #141414;
+//      background-size: 100% 100%;
+//    }
+//
+//    .desc {
+//      font-size: 12px;
+//      height: 53px;
+//    }
+//  }
+//}
 </style>
