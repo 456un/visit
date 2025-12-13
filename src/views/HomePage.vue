@@ -11,6 +11,7 @@ import SkillsBlockComponent from "@/components/widgets/SkillsBlockComponent.vue"
 import DownloadSkillsComponent from "@/components/widgets/DownloadSkillsComponent.vue";
 import DesignComponent from "@/components/widgets/DesignComponent.vue";
 import PortfolioComponent from "@/components/widgets/PortfolioComponent.vue";
+import StepComponent from "@/components/widgets/StepComponent.vue";
 import {useHead} from "@vueuse/head";
 
 export default {
@@ -67,16 +68,17 @@ export default {
     DownloadSkillsComponent,
     DesignComponent,
     PortfolioComponent,
+    StepComponent,
   }
 }
 </script>
 
 <template>
-  <BlockInfoComponent class="no-padding top-block" id="#photo">
+  <BlockInfoComponent class="no-padding top-block" id="photo">
     <PhotoComponent class="photo-top"/>
     <DownloadSkillsComponent class="download-skills-top"/>
   </BlockInfoComponent>
-  <BlockInfoComponent id="#about">
+  <BlockInfoComponent id="about">
     <h2 class="title">Про меня</h2>
     <div class="content">
       <p>Добрый день!</p>
@@ -98,8 +100,13 @@ export default {
     </div>
   </BlockInfoComponent>
 
-  <BlockInfoComponent id="#skills">
-    <h2 class="title">Скиллы</h2>
+  <BlockInfoComponent id="step">
+    <h2 class="title">Этапы создания сайта</h2>
+    <StepComponent />
+  </BlockInfoComponent>
+
+  <BlockInfoComponent id="skills">
+    <h2 class="title">Навыки</h2>
     <SkillsBlockComponent>
       <template #main>
         <div class="columns">
@@ -254,27 +261,27 @@ export default {
     </SkillsBlockComponent>
   </BlockInfoComponent>
 
-  <BlockInfoComponent id="#works">
+  <BlockInfoComponent id="works">
     <h2 class="title">Опыт работы</h2>
     <WorkExperienceComponent />
   </BlockInfoComponent>
 
-  <BlockInfoComponent id="#reviews">
+  <BlockInfoComponent id="reviews">
     <h2 class="title">Отзывы</h2>
     <ReviewComponent />
   </BlockInfoComponent>
 
-  <BlockInfoComponent id="#portfolio">
+  <BlockInfoComponent id="portfolio">
     <h2 class="title">Портфолио</h2>
     <PortfolioComponent />
   </BlockInfoComponent>
 
-  <BlockInfoComponent id="#design">
+  <BlockInfoComponent id="design">
     <h2 class="title">Дизайн</h2>
     <DesignComponent/>
   </BlockInfoComponent>
 
-  <BlockInfoComponent id="#faq">
+  <BlockInfoComponent id="faq">
     <h2 class="title">FAQ</h2>
     <FaqComponent question="Почему почасовая ставка не рассчитывается как 8ч * ставка?">
       <ol>
@@ -326,7 +333,7 @@ export default {
     </FaqComponent>
   </BlockInfoComponent>
 
-  <BlockInfoComponent id="#contact">
+  <BlockInfoComponent id="contact">
     <h2 class="title">Написать мне</h2>
     <div class="contact">
       <SocialComponent/>
