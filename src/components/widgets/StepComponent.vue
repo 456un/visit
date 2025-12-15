@@ -28,7 +28,7 @@ export default {
   <div class="items">
     <div class="item">
       <div class="col-1">
-        <StepItemComponent title="ПРОЕКТИРОВАНИЕ" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
+        <StepItemComponent title="ПОДГОТОВКА" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
           <slot>
             <p>На данном этапе производится первичная проработка требований к сайту, в идеале имеем:</p>
             <ul>
@@ -79,7 +79,7 @@ export default {
       <div class="col-3">
         <StepItemComponent title="ВЕРСТКА" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
           <slot>
-            <p>Здесь переводим дизайна в html шаблоны, которые могут обрабатываться браузером</p>
+            <p>Здесь переводим дизайн в html шаблоны, которые читаются браузером</p>
             <p>Выполняется мной, верстальщиком или frontend разработчиком</p>
           </slot>
         </StepItemComponent>
@@ -112,10 +112,10 @@ export default {
         <div class="col-1">
           <StepItemComponent title="DEV СЕРВЕР" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
             <slot>
-              <p>Здесь разворачивается сервер для тестирования сайта, и демонстрации его заказчику</p>
-              <p>Этап может выполняться до полной backend, frontend разработки, для демонстрации промежуточного
+              <p>Здесь готовится сервер для тестирования сайта, и демонстрации его заказчику</p>
+              <p>Этап может выполняться до полной backend, frontend разработки, для демонстрации текущего
                 результата</p>
-              <p>Выполняется мной или системным администратором</p>
+              <p>Выполняется мной или сисадмином</p>
             </slot>
           </StepItemComponent>
         </div>
@@ -167,23 +167,14 @@ export default {
         <div class="col-1">
           <StepItemComponent title="PROD СЕРВЕР" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
             <slot>
-              <p>Окончательный этап, где поднимается боевой сервер, сайт подготавливается для запуска и
+              <p>Финальный этап, где поднимается боевой сервер, сайт готовится для запуска и
                 открытию для пользователей</p>
-              <p>Выполняется мной или системным администратором</p>
+              <p>Выполняется мной или сисадмином</p>
             </slot>
           </StepItemComponent>
         </div>
         <div class="col-2"></div>
-        <div class="col-3 legend-block">
-          <div class="legend">
-            <div class="hammer">
-              &nbsp;—&nbsp;услуга может предоставляться мной или отдельно нанятым специалистом с вашей стороны
-            </div>
-            <div class="one-star">*&nbsp;—&nbsp;могу выполнить дизайн за указанную цену</div>
-            <div class="two-star">**&nbsp;—&nbsp;указаны средние цены middle специалистов (junior → middle → senior)
-            </div>
-          </div>
-        </div>
+        <div class="col-3"></div>
       </div>
       <div class="transition">
         <div class="col-1 arrow-down"></div>
@@ -214,6 +205,17 @@ export default {
         </div>
         <div class="col-2"></div>
         <div class="col-3"></div>
+      </div>
+    </div>
+
+    <div class="legend-block">
+      <div class="legend">
+        <div class="hammer">
+          <div class="icon">&nbsp;</div>&nbsp;—&nbsp;услуга может предоставляться мной или отдельно нанятым специалистом с вашей стороны
+        </div>
+        <div class="one-star">*&nbsp;—&nbsp;могу выполнить дизайн за указанную цену</div>
+        <div class="two-star">**&nbsp;—&nbsp;указаны средние цены middle специалистов (junior → middle → senior)
+        </div>
       </div>
     </div>
   </div>
@@ -271,45 +273,6 @@ export default {
         background-size: 29px 68px;
       }
     }
-
-    .legend-block {
-      position: relative;
-
-      .legend {
-        position: absolute;
-        width: calc(100% - 24px);
-        height: 355px;
-        display: flex;
-        flex-direction: column;
-        padding: 12px;
-        background: #1FA184;
-        border-radius: 8px;
-        font-size: 14px;
-        z-index: 5;
-
-        .hammer {
-          display: flex;
-          padding-left: 46px;
-          height: fit-content;
-          justify-content: center;
-          background: transparent url("@/assets/img/hammer2.png") no-repeat top left;
-          background-size: 20px 20px;
-          text-indent: -26px;
-        }
-
-        .one-star {
-          margin-top: 9px;
-          padding-left: 48px;
-          text-indent: -36px;
-        }
-
-        .two-star {
-          margin-top: 9px;
-          padding-left: 48px;
-          text-indent: -44px;
-        }
-      }
-    }
   }
 
   .transition {
@@ -365,6 +328,41 @@ export default {
   }
 }
 
+.legend-block {
+  position: relative;
+
+  .legend {
+    width: calc(100% - 24px);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    background: #1FA184;
+    border-radius: 8px;
+    font-size: 12px;
+
+    .hammer {
+      height: fit-content;
+
+      .icon {
+        display: inline;
+        height: 11px;
+        padding-left: 11px;
+        background: transparent url("@/assets/img/hammer2.png") no-repeat top left;
+        background-size: 11px 11px;
+      }
+    }
+
+    .one-star {
+      margin-top: 9px;
+    }
+
+    .two-star {
+      margin-top: 9px;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .items {
     .item {
@@ -375,28 +373,6 @@ export default {
 
         &.parallel {
           background-size: 11.5px 34px;
-        }
-      }
-
-      .legend-block {
-        .legend {
-          font-size: 12px;
-
-          .hammer {
-            background: transparent url("/src/assets/img/hammer2.png") no-repeat top 3px left;
-            background-size: 11px 11px;
-            text-indent: -23px;
-          }
-
-          .one-star {
-            padding-left: 41px;
-            text-indent: -31px;
-          }
-
-          .two-star {
-            padding-left: 41px;
-            text-indent: -38px;
-          }
         }
       }
     }
@@ -410,8 +386,8 @@ export default {
 
       .label-center {
         font-size: 11px;
-        width: 180px;
-        left: calc(50% - 90px);
+        width: 130px;
+        left: calc(50% - 65px);
         height: fit-content;
         text-align: center;
         padding: 5px 0;
@@ -419,9 +395,9 @@ export default {
 
       .label-right {
         font-size: 11px;
-        width: 180px;
+        width: 150px;
         text-align: center;
-        left: calc(50% - 80px);
+        left: calc(50% - 90px);
       }
     }
   }
@@ -462,7 +438,6 @@ export default {
   transition: max-height 2s, opacity 2s;
   opacity: 0;
   visibility: hidden;
-  overflow: hidden;
 
   &.show {
     max-height: 5000px;

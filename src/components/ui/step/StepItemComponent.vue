@@ -74,6 +74,7 @@ export default {
     .price {
       font-size: 14px;
       margin-top: 16px;
+      text-align: center;
 
       :deep(.up) {
         font-size: 0.7em;
@@ -134,11 +135,15 @@ export default {
       }
 
       .title {
-        font-size: 14px;
+        font-size: 12px;
+        word-break: break-all;
+        text-align: center;
+        padding: 0 5px;
       }
 
       .price {
-        font-size: 12px;
+        font-size: 11px;
+        padding: 0 5px;
       }
     }
   }
