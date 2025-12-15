@@ -113,7 +113,7 @@ export default {
           <StepItemComponent title="DEV СЕРВЕР" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
             <slot>
               <p>Здесь готовится сервер для тестирования сайта, и демонстрации его заказчику</p>
-              <p>Этап может выполняться до полной backend, frontend разработки, для демонстрации текущего
+              <p>Этап может выполняться до завершения этапа backend и frontend разработки, для демонстрации текущего
                 результата</p>
               <p>Выполняется мной или сисадмином</p>
             </slot>
@@ -211,7 +211,7 @@ export default {
     <div class="legend-block">
       <div class="legend">
         <div class="hammer">
-          <div class="icon">&nbsp;</div>&nbsp;—&nbsp;услуга может предоставляться мной или отдельно нанятым специалистом с вашей стороны
+          <div class="icon"></div>&nbsp;—&nbsp;услуга может оказываться мной или отдельно нанятым специалистом с вашей стороны
         </div>
         <div class="one-star">*&nbsp;—&nbsp;могу выполнить дизайн за указанную цену</div>
         <div class="two-star">**&nbsp;—&nbsp;указаны средние цены middle специалистов (junior → middle → senior)
@@ -228,6 +228,10 @@ export default {
 </template>
 
 <style scoped lang="scss">
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .film {
   width: 100vw;
   height: 100vh;
@@ -243,6 +247,7 @@ export default {
   margin-bottom: 22px;
 
   .item {
+    position: relative;
     display: flex;
 
     .start {
@@ -257,7 +262,6 @@ export default {
 
     .col-1, .col-3 {
       width: 43.8%;
-      position: relative;
     }
 
     .col-2 {
@@ -348,7 +352,7 @@ export default {
         display: inline;
         height: 11px;
         padding-left: 11px;
-        background: transparent url("@/assets/img/hammer2.png") no-repeat top left;
+        background: transparent url("@/assets/img/hammer2.png") no-repeat top 2px left;
         background-size: 11px 11px;
       }
     }
