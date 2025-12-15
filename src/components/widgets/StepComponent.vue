@@ -11,7 +11,13 @@ export default {
   data() {
     return {
       showFilm: false,
+      isShowAll: false,
     }
+  },
+  methods: {
+    showAll() {
+      this.isShowAll = true;
+    },
   },
 }
 </script>
@@ -99,111 +105,122 @@ export default {
       </div>
     </div>
   </div>
-  <StepHeaderComponent>ТЕСТИРОВАНИЕ, НАПОЛНЕНИЕ, SEO</StepHeaderComponent>
-  <div class="items">
-    <div class="item">
-      <div class="col-1">
-        <StepItemComponent title="DEV СЕРВЕР" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
-          <slot>
-            <p>Здесь разворачивается сервер для тестирования сайта, и демонстрации его заказчику</p>
-            <p>Этап может выполняться до полной backend, frontend разработки, для демонстрации промежуточного
-              результата</p>
-            <p>Выполняется мной или системным администратором</p>
-          </slot>
-        </StepItemComponent>
+  <div class="skill-wrapper-all" :class="{show: isShowAll}">
+    <StepHeaderComponent>ТЕСТИРОВАНИЕ, НАПОЛНЕНИЕ, SEO</StepHeaderComponent>
+    <div class="items">
+      <div class="item">
+        <div class="col-1">
+          <StepItemComponent title="DEV СЕРВЕР" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
+            <slot>
+              <p>Здесь разворачивается сервер для тестирования сайта, и демонстрации его заказчику</p>
+              <p>Этап может выполняться до полной backend, frontend разработки, для демонстрации промежуточного
+                результата</p>
+              <p>Выполняется мной или системным администратором</p>
+            </slot>
+          </StepItemComponent>
+        </div>
+        <div class="col-2 arrow-right"></div>
+        <div class="col-3">
+          <StepItemComponent title="ЗАПОЛНЕНИЕ" price="от 700 руб/ч" :myWork="false" @updateShowFilm="showFilm=$event">
+            <slot>
+              <p>На данном этапе пишутся тексты, подбираются фотографии, решается какую информацию выводить на сайте</p>
+              <p>Заполняется frontend разработчиком или менеджером/заказчиком через админку (если она есть и заполнение
+                реализовано)</p>
+              <p>Выполняется контент менеджером/заказчиком, при необходимости подключается frontend и/или backend
+                разработчик</p>
+            </slot>
+          </StepItemComponent>
+        </div>
       </div>
-      <div class="col-2 arrow-right"></div>
-      <div class="col-3">
-        <StepItemComponent title="ЗАПОЛНЕНИЕ" price="от 700 руб/ч" :myWork="false" @updateShowFilm="showFilm=$event">
-          <slot>
-            <p>На данном этапе пишутся тексты, подбираются фотографии, решается какую информацию выводить на сайте</p>
-            <p>Заполняется frontend разработчиком или менеджером/заказчиком через админку (если она есть и заполнение
-              реализовано)</p>
-            <p>Выполняется контент менеджером/заказчиком, при необходимости подключается frontend и/или backend
-              разработчик</p>
-          </slot>
-        </StepItemComponent>
+      <div class="transition">
+        <div class="col-1 arrow-down"></div>
+        <div class="label-center">можно делать одновременно</div>
+        <div class="col-3 arrow-down"></div>
       </div>
-    </div>
-    <div class="transition">
-      <div class="col-1 arrow-down"></div>
-      <div class="label-center">можно делать одновременно</div>
-      <div class="col-3 arrow-down"></div>
-    </div>
-    <div class="item">
-      <div class="col-1">
-        <StepItemComponent title="ТЕСТИРОВАНИЕ" price="от 1000 руб/ч" :myWork="false" @updateShowFilm="showFilm=$event">
-          <slot>
-            <p>На этом этапе производится поиск ошибок(багов), недоработок, корректность выведенной информации,
-              проверка правильности работы SEO</p>
-            <p>Данный этап выполняется тестировщиком или заказчиком</p>
-            <p>Самим разработчиком данный этап выполняется редко, из-за "замыленности" глаза</p>
-          </slot>
-        </StepItemComponent>
-      </div>
-      <div class="col-2 parallel"></div>
-      <div class="col-3">
-        <StepItemComponent title="SEO" price="от 1500 руб/ч" :myWork="false" @updateShowFilm="showFilm=$event">
-          <slot>
-            <p>Данный этап подразумевает оптимизацию сайта под поисковые системы (Google, Yandex), под соц. сети, все
-              что связано с поиском и отображением сайта в других системах</p>
-            <p>Выполняется SEO специалистом совместно с frontend, иногда backend разработчиком</p>
-          </slot>
-        </StepItemComponent>
-      </div>
-    </div>
-  </div>
-  <StepHeaderComponent>ЗАПУСК</StepHeaderComponent>
-  <div class="items">
-    <div class="item">
-      <div class="col-1">
-        <StepItemComponent title="PROD СЕРВЕР" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
-          <slot>
-            <p>Окончательный этап, где поднимается боевой сервер, сайт подготавливается для запуска и
-              открытию для пользователей</p>
-            <p>Выполняется мной или системным администратором</p>
-          </slot>
-        </StepItemComponent>
-      </div>
-      <div class="col-2"></div>
-      <div class="col-3 legend-block">
-        <div class="legend">
-          <div class="hammer">
-            &nbsp;—&nbsp;услуга может предоставляться мной или отдельно нанятым специалистом с вашей стороны
-          </div>
-          <div class="one-star">*&nbsp;—&nbsp;могу выполнить дизайн за указанную цену</div>
-          <div class="two-star">**&nbsp;—&nbsp;указаны средние цены middle специалистов (junior → middle → senior)</div>
+      <div class="item">
+        <div class="col-1">
+          <StepItemComponent title="ТЕСТИРОВАНИЕ" price="от 1000 руб/ч" :myWork="false"
+                             @updateShowFilm="showFilm=$event">
+            <slot>
+              <p>На этом этапе производится поиск ошибок(багов), недоработок, корректность выведенной информации,
+                проверка правильности работы SEO</p>
+              <p>Данный этап выполняется тестировщиком или заказчиком</p>
+              <p>Самим разработчиком данный этап выполняется редко, из-за "замыленности" глаза</p>
+            </slot>
+          </StepItemComponent>
+        </div>
+        <div class="col-2 parallel"></div>
+        <div class="col-3">
+          <StepItemComponent title="SEO" price="от 1500 руб/ч" :myWork="false" @updateShowFilm="showFilm=$event">
+            <slot>
+              <p>Данный этап подразумевает оптимизацию сайта под поисковые системы (Google, Yandex), под соц. сети, все
+                что связано с поиском и отображением сайта в других системах</p>
+              <p>Выполняется SEO специалистом совместно с frontend, иногда backend разработчиком</p>
+            </slot>
+          </StepItemComponent>
         </div>
       </div>
     </div>
-    <div class="transition">
-      <div class="col-1 arrow-down"></div>
-      <div class="col-3"></div>
-    </div>
-    <div class="item">
-      <div class="col-1">
-        <StepItemComponent title="ТЕСТИРОВАНИЕ" price="от 1000 руб/ч" :myWork="false" @updateShowFilm="showFilm=$event">
-          <slot>
-            <p>Этап финального тестирования сайта перед запуском, заново прогоняется весь функционал,
-              проверяются занесенные данные</p>
-            <p>Проводится тестировщиком или заказчиком</p>
-          </slot>
-        </StepItemComponent>
+    <StepHeaderComponent>ЗАПУСК</StepHeaderComponent>
+    <div class="items">
+      <div class="item">
+        <div class="col-1">
+          <StepItemComponent title="PROD СЕРВЕР" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
+            <slot>
+              <p>Окончательный этап, где поднимается боевой сервер, сайт подготавливается для запуска и
+                открытию для пользователей</p>
+              <p>Выполняется мной или системным администратором</p>
+            </slot>
+          </StepItemComponent>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-3 legend-block">
+          <div class="legend">
+            <div class="hammer">
+              &nbsp;—&nbsp;услуга может предоставляться мной или отдельно нанятым специалистом с вашей стороны
+            </div>
+            <div class="one-star">*&nbsp;—&nbsp;могу выполнить дизайн за указанную цену</div>
+            <div class="two-star">**&nbsp;—&nbsp;указаны средние цены middle специалистов (junior → middle → senior)
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-2"></div>
-      <div class="col-3">
+      <div class="transition">
+        <div class="col-1 arrow-down"></div>
+        <div class="col-3"></div>
+      </div>
+      <div class="item">
+        <div class="col-1">
+          <StepItemComponent title="ТЕСТИРОВАНИЕ" price="от 1000 руб/ч" :myWork="false"
+                             @updateShowFilm="showFilm=$event">
+            <slot>
+              <p>Этап финального тестирования сайта перед запуском, заново прогоняется весь функционал,
+                проверяются занесенные данные</p>
+              <p>Проводится тестировщиком или заказчиком</p>
+            </slot>
+          </StepItemComponent>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-3">
+        </div>
+      </div>
+      <div class="transition">
+        <div class="col-1 arrow-down"></div>
+        <div class="col-3"></div>
+      </div>
+      <div class="item">
+        <div class="col-1">
+          <div class="start">ЗАПУСК</div>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-3"></div>
       </div>
     </div>
-    <div class="transition">
-      <div class="col-1 arrow-down"></div>
-      <div class="col-3"></div>
-    </div>
-    <div class="item">
-      <div class="col-1">
-        <div class="start">ЗАПУСК</div>
-      </div>
-      <div class="col-2"></div>
-      <div class="col-3"></div>
+  </div>
+  <div class="show-all" :class="{hide: isShowAll}">
+    <div class="show-all-btn" @click="showAll">
+      <div class="label-btn">больше информации</div>
+      <div class="img-btn"></div>
     </div>
   </div>
 </template>
@@ -407,6 +424,50 @@ export default {
         left: calc(50% - 80px);
       }
     }
+  }
+}
+
+.show-all {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  &.hide {
+    display: none;
+  }
+
+  .show-all-btn {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .label-btn {
+      font-size: 14px;
+    }
+
+    .img-btn {
+      background: transparent url("@/assets/img/down.png") no-repeat center center;
+      background-size: 20px 20px;
+      width: 20px;
+      height: 20px;
+      margin-top: 5px;
+    }
+  }
+}
+
+.skill-wrapper-all {
+  display: block;
+  max-height: 0;
+  transition: max-height 2s, opacity 2s;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+
+  &.show {
+    max-height: 5000px;
+    opacity: 1;
+    visibility: visible;
   }
 }
 </style>

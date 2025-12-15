@@ -3,12 +3,12 @@ export default {
   name: "SkillsBlockComponent",
   data () {
     return {
-      isShowAll: false
+      isShowAll: false,
     }
   },
   methods: {
     showAll() {
-      this.isShowAll = true
+      this.isShowAll = true;
     },
   },
 }
