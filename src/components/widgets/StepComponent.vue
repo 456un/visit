@@ -7,31 +7,42 @@ export default {
   components: {
     StepHeaderComponent,
     StepItemComponent,
-  }
+  },
+  data() {
+    return {
+      showFilm: false,
+    }
+  },
 }
 </script>
 
 <template>
+  <div class="film" v-show="showFilm"></div>
   <StepHeaderComponent>РАЗРАБОТКА</StepHeaderComponent>
   <div class="items">
     <div class="item">
       <div class="col-1">
-        <StepItemComponent title="ПРОЕКТИРОВАНИЕ" price="2500 руб/ч" :myWork="true">
+        <StepItemComponent title="ПРОЕКТИРОВАНИЕ" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
           <slot>
-            <p>Проектирование включает себя:</p>
+            <p>На данном этапе производится первичная проработка требований к сайту, в идеале имеем:</p>
             <ul>
-              <li>Создание прототипа сайта</li>
-              <li>Разработкой структуры сайта</li>
-              <li>Написании ТЗ или постановки задач</li>
+              <li>Прототип сайта</li>
+              <li>Структуру сайта</li>
+              <li>Что используем при разработке сайта (CMS, framework и т.п.)</li>
+              <li>ТЗ или задачи для разработчика, дизайнера и т.д.</li>
             </ul>
-            <p>Выполняется: заказчиком или мной совместно с заказчиком</p>
+            <p>Выполняется заказчиком или мной совместно с заказчиком</p>
           </slot>
         </StepItemComponent>
       </div>
       <div class="col-2 arrow-right"></div>
       <div class="col-3">
-        <StepItemComponent title="ДИЗАЙН" price="от 2000 (500<span class='up'>*</span>) руб/ч" :myWork="true">
-          <slot></slot>
+        <StepItemComponent title="ДИЗАЙН" price="от 2000 (500<span class='up'>*</span>) руб/ч" :myWork="true"
+                           @updateShowFilm="showFilm=$event">
+          <slot>
+            <p>Здесь разрабатываем внешний вид сайта, админки, иконки сайта, брендбука и т.д.</p>
+            <p>Выполняется дизайнером</p>
+          </slot>
         </StepItemComponent>
       </div>
     </div>
@@ -42,14 +53,29 @@ export default {
     </div>
     <div class="item">
       <div class="col-1">
-        <StepItemComponent title="BACKEND" price="3000 руб/ч" :myWork="true">
-          <slot></slot>
+        <StepItemComponent title="BACKEND" price="3000 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
+          <slot>
+            <p>
+              Этот этап подразумевает разработку внутренней части сайта, расположенной на сервере, и к которой
+              пользователь не может получить доступ из браузера.
+            </p>
+            <p>
+              На стороне бэкенда производится обработка данных, прием заказов, проведение оплат, интеграция с 1С,
+              работа с базой данных, авторизация, защита данных и т.д.
+            </p>
+            <p>
+              Выполняется мной или бэкенд разработчиком
+            </p>
+          </slot>
         </StepItemComponent>
       </div>
       <div class="col-2 parallel"></div>
       <div class="col-3">
-        <StepItemComponent title="ВЕРСТКА" price="2500 руб/ч" :myWork="true">
-          <slot></slot>
+        <StepItemComponent title="ВЕРСТКА" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
+          <slot>
+            <p>Здесь переводим дизайна в html шаблоны, которые могут обрабатываться браузером</p>
+            <p>Выполняется мной, верстальщиком или frontend разработчиком</p>
+          </slot>
         </StepItemComponent>
       </div>
     </div>
@@ -64,8 +90,11 @@ export default {
       </div>
       <div class="col-2"></div>
       <div class="col-3">
-        <StepItemComponent title="FRONTEND" price="2500 руб/ч" :myWork="true">
-          <slot></slot>
+        <StepItemComponent title="FRONTEND" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
+          <slot>
+            <p>На данном этапе внедряем верстку в сайт, связываем ее с бэкендом</p>
+            <p>Данный этап выполняется мной или frontend разработчиком</p>
+          </slot>
         </StepItemComponent>
       </div>
     </div>
@@ -74,14 +103,25 @@ export default {
   <div class="items">
     <div class="item">
       <div class="col-1">
-        <StepItemComponent title="DEV СЕРВЕР" price="2500 руб/ч" :myWork="true">
-          <slot></slot>
+        <StepItemComponent title="DEV СЕРВЕР" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
+          <slot>
+            <p>Здесь разворачивается сервер для тестирования сайта, и демонстрации его заказчику</p>
+            <p>Этап может выполняться до полной backend, frontend разработки, для демонстрации промежуточного
+              результата</p>
+            <p>Выполняется мной или системным администратором</p>
+          </slot>
         </StepItemComponent>
       </div>
       <div class="col-2 arrow-right"></div>
       <div class="col-3">
-        <StepItemComponent title="ЗАПОЛНЕНИЕ" price="от 700 руб/ч" :myWork="false">
-          <slot></slot>
+        <StepItemComponent title="ЗАПОЛНЕНИЕ" price="от 700 руб/ч" :myWork="false" @updateShowFilm="showFilm=$event">
+          <slot>
+            <p>На данном этапе пишутся тексты, подбираются фотографии, решается какую информацию выводить на сайте</p>
+            <p>Заполняется frontend разработчиком или менеджером/заказчиком через админку (если она есть и заполнение
+              реализовано)</p>
+            <p>Выполняется контент менеджером/заказчиком, при необходимости подключается frontend и/или backend
+              разработчик</p>
+          </slot>
         </StepItemComponent>
       </div>
     </div>
@@ -92,14 +132,23 @@ export default {
     </div>
     <div class="item">
       <div class="col-1">
-        <StepItemComponent title="ТЕСТИРОВАНИЕ" price="от 1000 руб/ч" :myWork="false">
-          <slot></slot>
+        <StepItemComponent title="ТЕСТИРОВАНИЕ" price="от 1000 руб/ч" :myWork="false" @updateShowFilm="showFilm=$event">
+          <slot>
+            <p>На этом этапе производится поиск ошибок(багов), недоработок, корректность выведенной информации,
+              проверка правильности работы SEO</p>
+            <p>Данный этап выполняется тестировщиком или заказчиком</p>
+            <p>Самим разработчиком данный этап выполняется редко, из-за "замыленности" глаза</p>
+          </slot>
         </StepItemComponent>
       </div>
       <div class="col-2 parallel"></div>
       <div class="col-3">
-        <StepItemComponent title="SEO" price="от 1500 руб/ч" :myWork="true">
-          <slot></slot>
+        <StepItemComponent title="SEO" price="от 1500 руб/ч" :myWork="false" @updateShowFilm="showFilm=$event">
+          <slot>
+            <p>Данный этап подразумевает оптимизацию сайта под поисковые системы (Google, Yandex), под соц. сети, все
+              что связано с поиском и отображением сайта в других системах</p>
+            <p>Выполняется SEO специалистом совместно с frontend, иногда backend разработчиком</p>
+          </slot>
         </StepItemComponent>
       </div>
     </div>
@@ -108,12 +157,24 @@ export default {
   <div class="items">
     <div class="item">
       <div class="col-1">
-        <StepItemComponent title="PROD СЕРВЕР" price="2500 руб/ч" :myWork="true">
-          <slot></slot>
+        <StepItemComponent title="PROD СЕРВЕР" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
+          <slot>
+            <p>Окончательный этап, где поднимается боевой сервер, сайт подготавливается для запуска и
+              открытию для пользователей</p>
+            <p>Выполняется мной или системным администратором</p>
+          </slot>
         </StepItemComponent>
       </div>
       <div class="col-2"></div>
-      <div class="col-3"></div>
+      <div class="col-3 legend-block">
+        <div class="legend">
+          <div class="hammer">
+            &nbsp;—&nbsp;услуга может предоставляться мной или отдельно нанятым специалистом с вашей стороны
+          </div>
+          <div class="one-star">*&nbsp;—&nbsp;могу выполнить дизайн за указанную цену</div>
+          <div class="two-star">**&nbsp;—&nbsp;указаны средние цены middle специалистов (junior → middle → senior)</div>
+        </div>
+      </div>
     </div>
     <div class="transition">
       <div class="col-1 arrow-down"></div>
@@ -121,12 +182,17 @@ export default {
     </div>
     <div class="item">
       <div class="col-1">
-        <StepItemComponent title="ТЕСТИРОВАНИЕ" price="от 1000 руб/ч" :myWork="false">
-          <slot></slot>
+        <StepItemComponent title="ТЕСТИРОВАНИЕ" price="от 1000 руб/ч" :myWork="false" @updateShowFilm="showFilm=$event">
+          <slot>
+            <p>Этап финального тестирования сайта перед запуском, заново прогоняется весь функционал,
+              проверяются занесенные данные</p>
+            <p>Проводится тестировщиком или заказчиком</p>
+          </slot>
         </StepItemComponent>
       </div>
       <div class="col-2"></div>
-      <div class="col-3"></div>
+      <div class="col-3">
+      </div>
     </div>
     <div class="transition">
       <div class="col-1 arrow-down"></div>
@@ -143,6 +209,17 @@ export default {
 </template>
 
 <style scoped lang="scss">
+.film {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 9;
+  background: black;
+  opacity: 0.85;
+  top: 0;
+  left: 0;
+}
+
 .items {
   margin-bottom: 22px;
 
@@ -161,6 +238,7 @@ export default {
 
     .col-1, .col-3 {
       width: 43.8%;
+      position: relative;
     }
 
     .col-2 {
@@ -174,6 +252,45 @@ export default {
       &.parallel {
         background: transparent url("@/assets/img/step-parallel.png") no-repeat center center;
         background-size: 29px 68px;
+      }
+    }
+
+    .legend-block {
+      position: relative;
+
+      .legend {
+        position: absolute;
+        width: calc(100% - 24px);
+        height: 355px;
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        background: #1FA184;
+        border-radius: 8px;
+        font-size: 14px;
+        z-index: 5;
+
+        .hammer {
+          display: flex;
+          padding-left: 46px;
+          height: fit-content;
+          justify-content: center;
+          background: transparent url("@/assets/img/hammer2.png") no-repeat top left;
+          background-size: 20px 20px;
+          text-indent: -26px;
+        }
+
+        .one-star {
+          margin-top: 9px;
+          padding-left: 48px;
+          text-indent: -36px;
+        }
+
+        .two-star {
+          margin-top: 9px;
+          padding-left: 48px;
+          text-indent: -44px;
+        }
       }
     }
   }
@@ -226,6 +343,68 @@ export default {
 
       p {
         margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .items {
+    .item {
+      .col-2 {
+        &.arrow-right {
+          background-size: 25px 25px;
+        }
+
+        &.parallel {
+          background-size: 11.5px 34px;
+        }
+      }
+
+      .legend-block {
+        .legend {
+          font-size: 12px;
+
+          .hammer {
+            background: transparent url("/src/assets/img/hammer2.png") no-repeat top 3px left;
+            background-size: 11px 11px;
+            text-indent: -23px;
+          }
+
+          .one-star {
+            padding-left: 41px;
+            text-indent: -31px;
+          }
+
+          .two-star {
+            padding-left: 41px;
+            text-indent: -38px;
+          }
+        }
+      }
+    }
+
+    .transition {
+      .col-1, .col-3 {
+        &.arrow-down {
+          background-size: 25px 25px;
+        }
+      }
+
+      .label-center {
+        font-size: 11px;
+        width: 180px;
+        left: calc(50% - 90px);
+        height: fit-content;
+        text-align: center;
+        padding: 5px 0;
+      }
+
+      .label-right {
+        font-size: 11px;
+        width: 180px;
+        text-align: center;
+        left: calc(50% - 80px);
       }
     }
   }
