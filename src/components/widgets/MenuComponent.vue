@@ -20,7 +20,7 @@ export default {
 <template>
   <div class="menu">
     <RouterLink to="/">Обо мне</RouterLink>
-    <RouterLink to="/blog" :style="{display: 'none'}">Блог</RouterLink>
+    <RouterLink to="/blog">Блог</RouterLink>
     <RouterLink to="/service">Сервисы</RouterLink>
     <RouterLink to="/donate">Поддержать</RouterLink>
   </div>
@@ -29,7 +29,7 @@ export default {
     <div class="close-btn" @click="hideMenu" v-show="openMenu"></div>
     <div class="menu-popup" v-show="openMenu">
       <RouterLink to="/" @click="hideMenu">Обо мне</RouterLink>
-      <RouterLink to="/blog" :style="{display: 'none'}" @click="hideMenu">Блог</RouterLink>
+      <RouterLink to="/blog" @click="hideMenu">Блог</RouterLink>
       <RouterLink to="/service" @click="hideMenu">Сервисы</RouterLink>
       <RouterLink to="/donate" @click="hideMenu">Поддержать</RouterLink>
     </div>
@@ -44,7 +44,7 @@ export default {
     a {
       color: white;
       text-decoration: none;
-      font-size: 20px;
+      font-size: 16px;
       margin-left: 30px;
       padding: 10px 0;
       display: block;
