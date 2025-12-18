@@ -3,6 +3,7 @@ import HomePage from '@/views/HomePage.vue';
 import BlogMenuPage from "@/views/BlogMenuPage.vue";
 import ServicePage from "@/views/ServicePage.vue";
 import DonatePage from "@/views/DonatePage.vue";
+import BlogPostPage from "@/views/BlogPostPage.vue";
 
 const routes = [
     {
@@ -12,6 +13,12 @@ const routes = [
     {
         path: '/blog',
         component: BlogMenuPage,
+    },
+    {
+        path: '/blog/:slug',
+        name: 'blog.post',
+        component: BlogPostPage,
+        props: true,
     },
     {
         path: '/service',

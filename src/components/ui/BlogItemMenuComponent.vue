@@ -3,13 +3,13 @@ export default {
   name: "BlogItemMenuComponent",
   props: [
       'title',
-      'link'
+      'link',
   ],
 }
 </script>
 
 <template>
-  <RouterLink :to="link">{{ title }}</RouterLink>
+  <RouterLink :to="{ name: 'blog.post', params: { slug: link}}">{{ title }}</RouterLink>
 </template>
 
 <style scoped lang="scss">

@@ -1,20 +1,27 @@
 <script>
-import PhotoComponent from "@/components/layout/PhotoComponent.vue";
+import { posts } from '@/content/blog';
+import MarkdownIt from 'markdown-it';
 import DownloadSkillsComponent from "@/components/widgets/DownloadSkillsComponent.vue";
 import BlockInfoComponent from "@/components/widgets/BlockInfoComponent.vue";
-import BlogMenuComponent from "@/components/widgets/BlogMenuComponent.vue";
-import BlogItemsMenuComponent from "@/components/widgets/BlogItemsMenuComponent.vue";
-import BlogItemMenuComponent from "@/components/ui/BlogItemMenuComponent.vue";
+import PhotoComponent from "@/components/layout/PhotoComponent.vue";
+
+const md = new MarkdownIt();
 
 export default {
-  name: "BlogVue.vue",
-  components: {
-    BlockInfoComponent,
-    DownloadSkillsComponent,
-    PhotoComponent,
-    BlogMenuComponent,
-    BlogItemsMenuComponent,
-    BlogItemMenuComponent,
+  name: "BlogPostPage",
+  components: {PhotoComponent, BlockInfoComponent, DownloadSkillsComponent},
+  props: [
+    'slug',
+  ],
+  setup(props) {
+    const post = posts.find(p => {
+      return p.slug === props.slug
+    });
+
+    return {
+      post,
+      html: post ? md.render(post.content) : '',
+    };
   },
 }
 </script>
@@ -25,13 +32,10 @@ export default {
     <DownloadSkillsComponent class="download-skills-top"/>
   </BlockInfoComponent>
   <h1>Блог</h1>
-  <div class="blog">
-    <BlogMenuComponent>
-      <BlogItemsMenuComponent title="Этапы разработки сайта">
-        <BlogItemMenuComponent title="Этап проектирования сайта (подготовка)" link="step-planning"/>
-      </BlogItemsMenuComponent>
-      <BlogItemMenuComponent title="CMS или framework" link="cms-or-framework"/>
-    </BlogMenuComponent>
+  <div class="article">
+    <h2>{{ post.title }}</h2>
+    <div class="content" v-html="html">
+    </div>
   </div>
 </template>
 
