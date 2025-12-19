@@ -31,6 +31,7 @@ export default {
         <BlogItemMenuComponent title="Этап проектирования сайта (подготовка)" link="step-planning"/>
       </BlogItemsMenuComponent>
       <BlogItemMenuComponent title="CMS или framework" link="cms-or-framework"/>
+      <BlogItemMenuComponent title="Сравнение популярных CMS" link="cms"/>
       <BlogItemMenuComponent title="Градация уровней разработчика" link="develop-level"/>
     </BlogMenuComponent>
   </div>
