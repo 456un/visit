@@ -31,7 +31,6 @@ export default {
     <PhotoComponent class="photo-top"/>
     <DownloadSkillsComponent class="download-skills-top"/>
   </BlockInfoComponent>
-  <h1>Блог</h1>
   <div class="article">
     <h2>{{ post.title }}</h2>
     <div class="content" v-html="html">
@@ -72,7 +71,6 @@ h2 {
 
 .article {
   margin-top: 28px;
-  overflow: hidden;
 
   :deep() {
     font-size: 14px;

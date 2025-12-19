@@ -31,6 +31,7 @@ export default {
         <BlogItemMenuComponent title="Этап проектирования сайта (подготовка)" link="step-planning"/>
       </BlogItemsMenuComponent>
       <BlogItemMenuComponent title="CMS или framework" link="cms-or-framework"/>
+      <BlogItemMenuComponent title="Градация уровней разработчика" link="develop-level"/>
     </BlogMenuComponent>
   </div>
 </template>
@@ -60,6 +61,7 @@ h1 {
 .blog {
   margin-top: 28px;
   overflow: hidden;
+  margin-bottom: 250px;
 }
 
 @media (max-width: 768px) {
