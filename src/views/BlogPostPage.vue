@@ -37,6 +37,7 @@ export default {
     <div class="content" v-html="html">
     </div>
   </div>
+  <RouterLink to="/blog">←назад</RouterLink>
 </template>
 
 <style scoped lang="scss">
@@ -61,9 +62,47 @@ h1 {
   font-weight: 400;
 }
 
-.blog {
+h2 {
+  font-size: 20px;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.article {
   margin-top: 28px;
   overflow: hidden;
+
+  :deep() {
+    font-size: 14px;
+
+    h3 {
+      font-size: 16px;
+      margin-top: 30px;
+    }
+
+    table {
+      border-collapse: collapse;
+      border: 1px solid white;
+      margin-top: 35px;
+
+      th, td {
+        padding: 5px 10px;
+        border: 1px solid white;
+        text-align: center;
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  padding: 0;
+  display: block;
+  margin: 28px 0 200px 0 ;
 }
 
 @media (max-width: 768px) {
