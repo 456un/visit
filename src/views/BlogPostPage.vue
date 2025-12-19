@@ -82,8 +82,10 @@ h2 {
 
     table {
       border-collapse: collapse;
-      border: 1px solid white;
       margin-top: 35px;
+      width: 100%;
+      overflow: auto;
+      display: block;
 
       th, td {
         padding: 5px 10px;
