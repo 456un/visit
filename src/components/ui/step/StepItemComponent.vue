@@ -5,6 +5,7 @@ export default {
       'title',
       'price',
       'myWork',
+      'link',
   ],
   data() {
     return {
@@ -31,6 +32,9 @@ export default {
     <div class="desc" :class="{open: isOpen}">
       <div class="text">
         <slot></slot>
+        <div class="more-link" v-if="link?.trim()">
+          <RouterLink :to="link">подробнее</RouterLink>
+        </div>
       </div>
       <div class="btn-close"></div>
     </div>
@@ -122,6 +126,21 @@ export default {
       background: url("@/assets/img/step-arrow-up.png") no-repeat center center, #B3DFD3;
       background-size: 24px 24px, 100% 100%;
       border-radius: 0 0 8px 8px;
+    }
+
+    .more-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        color: white;
+        font-size: 12px;
+        display: block;
+        margin: 10px 0 5px 0;
+        text-transform: uppercase;
+        text-decoration: underline;
+      }
     }
   }
 }

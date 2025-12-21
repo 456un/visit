@@ -93,6 +93,13 @@ h2 {
         text-align: center;
       }
     }
+
+    a {
+      color: white;
+      text-decoration: underline;
+      display: inline-block;
+      margin: 5px 0;
+    }
   }
 }
 

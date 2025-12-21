@@ -28,7 +28,8 @@ export default {
   <div class="items">
     <div class="item">
       <div class="col-1">
-        <StepItemComponent title="ПОДГОТОВКА" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
+        <StepItemComponent title="ПОДГОТОВКА" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event"
+                           link="/blog/step-planning">
           <slot>
             <p>На данном этапе производится первичная проработка требований к сайту, в идеале имеем:</p>
             <ul>
@@ -44,7 +45,7 @@ export default {
       <div class="col-2 arrow-right"></div>
       <div class="col-3">
         <StepItemComponent title="ДИЗАЙН" price="от 2000 (500<span class='up'>*</span>) руб/ч" :myWork="true"
-                           @updateShowFilm="showFilm=$event">
+                           @updateShowFilm="showFilm=$event" link="/blog/design">
           <slot>
             <p>Здесь разрабатываем внешний вид сайта, админки, иконки сайта, брендбука и т.д.</p>
             <p>Выполняется дизайнером</p>
@@ -59,7 +60,8 @@ export default {
     </div>
     <div class="item">
       <div class="col-1">
-        <StepItemComponent title="BACKEND" price="3000 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
+        <StepItemComponent title="BACKEND" price="3000 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event"
+                           link="/blog/backend">
           <slot>
             <p>
               Этот этап подразумевает разработку внутренней части сайта, расположенной на сервере, и к которой
@@ -77,7 +79,8 @@ export default {
       </div>
       <div class="col-2 parallel"></div>
       <div class="col-3">
-        <StepItemComponent title="ВЕРСТКА" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
+        <StepItemComponent title="ВЕРСТКА" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event"
+                           link="/blog/frontend">
           <slot>
             <p>Здесь переводим дизайн в html шаблоны, которые читаются браузером</p>
             <p>Выполняется мной, верстальщиком или frontend разработчиком</p>
@@ -96,7 +99,8 @@ export default {
       </div>
       <div class="col-2"></div>
       <div class="col-3">
-        <StepItemComponent title="FRONTEND" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
+        <StepItemComponent title="FRONTEND" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event"
+                           link="/blog/frontend">
           <slot>
             <p>На данном этапе внедряем верстку в сайт, связываем ее с бэкендом</p>
             <p>Данный этап выполняется мной или frontend разработчиком</p>
@@ -110,7 +114,8 @@ export default {
     <div class="items">
       <div class="item">
         <div class="col-1">
-          <StepItemComponent title="DEV СЕРВЕР" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
+          <StepItemComponent title="DEV СЕРВЕР" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event"
+                             link="/blog/server">
             <slot>
               <p>Здесь готовится сервер для тестирования сайта, и демонстрации его заказчику</p>
               <p>Этап может выполняться до завершения этапа backend и frontend разработки, для демонстрации текущего
@@ -121,7 +126,8 @@ export default {
         </div>
         <div class="col-2 arrow-right"></div>
         <div class="col-3">
-          <StepItemComponent title="ЗАПОЛНЕНИЕ" price="от 700 руб/ч" :myWork="false" @updateShowFilm="showFilm=$event">
+          <StepItemComponent title="ЗАПОЛНЕНИЕ" price="от 700 руб/ч" :myWork="false" @updateShowFilm="showFilm=$event"
+                             link="/blog/content">
             <slot>
               <p>На данном этапе пишутся тексты, подбираются фотографии, решается какую информацию выводить на сайте</p>
               <p>Заполняется frontend разработчиком или менеджером/заказчиком через админку (если она есть и заполнение
@@ -140,7 +146,7 @@ export default {
       <div class="item">
         <div class="col-1">
           <StepItemComponent title="ТЕСТИРОВАНИЕ" price="от 1000 руб/ч" :myWork="false"
-                             @updateShowFilm="showFilm=$event">
+                             @updateShowFilm="showFilm=$event" link="/blog/test">
             <slot>
               <p>На этом этапе производится поиск ошибок(багов), недоработок, корректность выведенной информации,
                 проверка правильности работы SEO</p>
@@ -151,7 +157,8 @@ export default {
         </div>
         <div class="col-2 parallel"></div>
         <div class="col-3">
-          <StepItemComponent title="SEO" price="от 1500 руб/ч" :myWork="false" @updateShowFilm="showFilm=$event">
+          <StepItemComponent title="SEO" price="от 1500 руб/ч" :myWork="false" @updateShowFilm="showFilm=$event"
+                             link="/blog/seo">
             <slot>
               <p>Данный этап подразумевает оптимизацию сайта под поисковые системы (Google, Yandex), под соц. сети, все
                 что связано с поиском и отображением сайта в других системах</p>
@@ -165,7 +172,8 @@ export default {
     <div class="items">
       <div class="item">
         <div class="col-1">
-          <StepItemComponent title="PROD СЕРВЕР" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event">
+          <StepItemComponent title="PROD СЕРВЕР" price="2500 руб/ч" :myWork="true" @updateShowFilm="showFilm=$event"
+                             link="/blog/server">
             <slot>
               <p>Финальный этап, где поднимается боевой сервер, сайт готовится для запуска и
                 открытию для пользователей</p>
@@ -183,7 +191,7 @@ export default {
       <div class="item">
         <div class="col-1">
           <StepItemComponent title="ТЕСТИРОВАНИЕ" price="от 1000 руб/ч" :myWork="false"
-                             @updateShowFilm="showFilm=$event">
+                             @updateShowFilm="showFilm=$event" link="/blog/test">
             <slot>
               <p>Этап финального тестирования сайта перед запуском, заново прогоняется весь функционал,
                 проверяются занесенные данные</p>
@@ -211,10 +219,12 @@ export default {
     <div class="legend-block">
       <div class="legend">
         <div class="hammer">
-          <div class="icon"></div>&nbsp;—&nbsp;услуга может оказываться мной или отдельно нанятым специалистом с вашей стороны
+          <div class="icon"></div>&nbsp;—&nbsp;услуга может оказываться мной или отдельно нанятым специалистом с вашей
+          стороны
         </div>
         <div class="one-star">*&nbsp;—&nbsp;могу выполнить дизайн за указанную цену</div>
-        <div class="two-star">**&nbsp;—&nbsp;указаны средние цены middle специалистов (junior → middle → senior)
+        <div class="two-star">**&nbsp;—&nbsp;указаны средние цены middle специалистов (junior → middle → senior,
+          <RouterLink to="/blog/develop-level">подробнее про уровни</RouterLink>)
         </div>
       </div>
     </div>
@@ -363,6 +373,11 @@ export default {
 
     .two-star {
       margin-top: 9px;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
     }
   }
 }
