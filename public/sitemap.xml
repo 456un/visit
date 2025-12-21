@@ -9,6 +9,46 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://dev-node.ru/blog/backend</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dev-node.ru/blog/cms</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dev-node.ru/blog/cms-or-framework</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dev-node.ru/blog/design</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dev-node.ru/blog/develop-level</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dev-node.ru/blog/frontend</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dev-node.ru/blog/seo</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dev-node.ru/blog/server</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dev-node.ru/blog/step-planning</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dev-node.ru/blog/test</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://dev-node.ru/service</loc>
         <priority>0.8</priority>
     </url>
