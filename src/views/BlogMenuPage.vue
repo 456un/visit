@@ -29,6 +29,13 @@ export default {
     <BlogMenuComponent>
       <BlogItemsMenuComponent title="Этапы разработки сайта">
         <BlogItemMenuComponent title="Этап проектирования сайта (подготовка)" link="step-planning"/>
+        <BlogItemMenuComponent title='Дизайн сайта: как сайт начинает "говорить" с клиентом' link="design"/>
+        <BlogItemMenuComponent title='Верстка и Frontend: превращаем дизайн в живой сайт' link="frontend"/>
+        <BlogItemMenuComponent title='Backend: "мозг" сайта, который вы не видите' link="backend"/>
+        <BlogItemMenuComponent title='Поднятие DEV и PROD серверов: где сайт живёт и развивается' link="server"/>
+        <BlogItemMenuComponent title='Тестирование: ищем ошибки до того, как их найдут клиенты' link="test"/>
+        <BlogItemMenuComponent title='Заполнение сайта контентом: о чём и как вы говорите с клиентом' link="content"/>
+        <BlogItemMenuComponent title='SEO: чтобы сайт находили в поиске' link="seo"/>
       </BlogItemsMenuComponent>
       <BlogItemMenuComponent title="CMS или framework" link="cms-or-framework"/>
       <BlogItemMenuComponent title="Сравнение популярных CMS" link="cms"/>
