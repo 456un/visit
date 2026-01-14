@@ -5,9 +5,49 @@ import BlockInfoComponent from "@/components/widgets/BlockInfoComponent.vue";
 import BlogMenuComponent from "@/components/widgets/BlogMenuComponent.vue";
 import BlogItemsMenuComponent from "@/components/widgets/BlogItemsMenuComponent.vue";
 import BlogItemMenuComponent from "@/components/ui/BlogItemMenuComponent.vue";
+import {useHead} from "@vueuse/head";
 
 export default {
   name: "BlogVue.vue",
+  setup() {
+    useHead({
+      title: "Fullstack разработчик Владислав Сенников – Разработка, интеграция, оптимизация",
+      meta: [
+        {
+          name: "description",
+          content: "Владислав Сенников – профессиональный fullstack разработчик. Разработка и интеграция веб-приложений на PHP, Go, Vue, Laravel и PostgreSQL.",
+        },
+        {
+          property: "keywords",
+          content: "fullstack разработчик, PHP, Go, PostgreSQL, Laravel, Vue, веб-разработка, интеграция сервисов, блог/",
+        },
+        {
+          property: "canonical",
+          content: "https://dev-node.ru/",
+        },
+        {
+          property: "og:title",
+          content: "Fullstack разработчик Владислав Сенников",
+        },
+        {
+          property: "og:description",
+          content: "Разработка и поддержка высоконагруженных систем. Интеграция сервисов, бэкенд на Go и PHP.",
+        },
+        {
+          property: "og:image",
+          content: "https://dev-node.ru/assets/img/avatar.jpg",
+        },
+        {
+          property: "og:url",
+          content: "https://dev-node.ru/",
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+      ]
+    });
+  },
   components: {
     BlockInfoComponent,
     DownloadSkillsComponent,

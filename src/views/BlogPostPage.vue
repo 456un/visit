@@ -4,6 +4,7 @@ import MarkdownIt from 'markdown-it';
 import DownloadSkillsComponent from "@/components/widgets/DownloadSkillsComponent.vue";
 import BlockInfoComponent from "@/components/widgets/BlockInfoComponent.vue";
 import PhotoComponent from "@/components/layout/PhotoComponent.vue";
+import {useHead} from "@vueuse/head";
 
 const md = new MarkdownIt();
 
@@ -14,6 +15,44 @@ export default {
     'slug',
   ],
   setup(props) {
+    useHead({
+      title: "Fullstack разработчик Владислав Сенников – Разработка, интеграция, оптимизация",
+      meta: [
+        {
+          name: "description",
+          content: "Владислав Сенников – профессиональный fullstack разработчик. Разработка и интеграция веб-приложений на PHP, Go, Vue, Laravel и PostgreSQL.",
+        },
+        {
+          property: "keywords",
+          content: "fullstack разработчик, PHP, Go, PostgreSQL, Laravel, Vue, веб-разработка, интеграция сервисов, блог/",
+        },
+        {
+          property: "canonical",
+          content: "https://dev-node.ru/",
+        },
+        {
+          property: "og:title",
+          content: "Fullstack разработчик Владислав Сенников",
+        },
+        {
+          property: "og:description",
+          content: "Разработка и поддержка высоконагруженных систем. Интеграция сервисов, бэкенд на Go и PHP.",
+        },
+        {
+          property: "og:image",
+          content: "https://dev-node.ru/assets/img/avatar.jpg",
+        },
+        {
+          property: "og:url",
+          content: "https://dev-node.ru/",
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+      ]
+    });
+
     const post = posts.find(p => {
       return p.slug === props.slug
     });
