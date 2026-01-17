@@ -5,6 +5,7 @@ import BlockInfoComponent from "@/components/widgets/BlockInfoComponent.vue";
 import BlogMenuComponent from "@/components/widgets/BlogMenuComponent.vue";
 import BlogItemsMenuComponent from "@/components/widgets/BlogItemsMenuComponent.vue";
 import BlogItemMenuComponent from "@/components/ui/BlogItemMenuComponent.vue";
+import SocialGroupComponent from "@/components/widgets/SocialGroupComponent.vue";
 import {useHead} from "@vueuse/head";
 
 export default {
@@ -55,6 +56,7 @@ export default {
     BlogMenuComponent,
     BlogItemsMenuComponent,
     BlogItemMenuComponent,
+    SocialGroupComponent,
   },
 }
 </script>
@@ -81,6 +83,9 @@ export default {
       <BlogItemMenuComponent title="Сравнение популярных CMS" link="cms"/>
       <BlogItemMenuComponent title="Градация уровней разработчика" link="develop-level"/>
     </BlogMenuComponent>
+    <div class="social-group">
+      <SocialGroupComponent vk="https://vk.com/dev_node" telegram="https://t.me/dev_node0"/>
+    </div>
   </div>
 </template>
 
@@ -110,6 +115,14 @@ h1 {
   margin-top: 28px;
   overflow: hidden;
   margin-bottom: 250px;
+}
+
+.social-group {
+  justify-content: right;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
 }
 
 @media (max-width: 768px) {

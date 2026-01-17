@@ -1,6 +1,9 @@
 <script>
+import SocialGroupComponent from "@/components/widgets/SocialGroupComponent.vue";
+
 export default {
   name: "ServiceComponent",
+  components: {SocialGroupComponent},
   data() {
     return {
       open: false,
@@ -28,6 +31,9 @@ export default {
       </div>
       <div class="form-encode" v-show="!hideEncode">
         <slot name="encode"></slot>
+      </div>
+      <div class="social-group">
+        <SocialGroupComponent vk="https://vk.com/dev_node_service" telegram="https://t.me/dev_node_service"/>
       </div>
     </div>
   </div>
@@ -63,6 +69,14 @@ export default {
     border-radius: 8px;
     padding: 13px 14px 23px 14px;
     margin-top: 10px;
+  }
+
+  .social-group {
+    justify-content: right;
+    align-items: center;
+    margin: 25px 0 25px 0;
+    width: 100%;
+    display: flex;
   }
 }
 </style>

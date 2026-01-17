@@ -5,12 +5,13 @@ import DownloadSkillsComponent from "@/components/widgets/DownloadSkillsComponen
 import BlockInfoComponent from "@/components/widgets/BlockInfoComponent.vue";
 import PhotoComponent from "@/components/layout/PhotoComponent.vue";
 import {useHead} from "@vueuse/head";
+import SocialGroupComponent from "@/components/widgets/SocialGroupComponent.vue";
 
 const md = new MarkdownIt();
 
 export default {
   name: "BlogPostPage",
-  components: {PhotoComponent, BlockInfoComponent, DownloadSkillsComponent},
+  components: {SocialGroupComponent, PhotoComponent, BlockInfoComponent, DownloadSkillsComponent},
   props: [
     'slug',
   ],
@@ -76,6 +77,9 @@ export default {
     </div>
   </div>
   <RouterLink to="/blog">←назад</RouterLink>
+  <div class="social-group">
+    <SocialGroupComponent vk="https://vk.com/dev_node" telegram="https://t.me/dev_node0"/>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -148,7 +152,15 @@ a {
   font-size: 14px;
   padding: 0;
   display: block;
-  margin: 28px 0 200px 0 ;
+  margin: 28px 0 0 0 ;
+}
+
+.social-group {
+  justify-content: right;
+  align-items: center;
+  margin: 25px 0 200px 0;
+  width: 100%;
+  display: flex;
 }
 
 @media (max-width: 768px) {
