@@ -23,7 +23,8 @@ export default {
     display: flex;
     background: #313C42;
     border-radius: 8px;
-    height: 177px;
+    min-height: 177px;
+    height: fit-content;
     width: 100%;
 
     .partner-left {
@@ -31,7 +32,7 @@ export default {
       align-items: center;
       justify-content: center;
       width: 179px;
-      height: 100%;
+      height: auto;
       background: #1FA184;
       border-radius: 8px 0 0 8px;
 
@@ -44,6 +45,23 @@ export default {
     .partner-right {
       width: calc(100% - 179px);
       padding: 21px 15px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .partner-item {
+      .partner-left {
+        width: 120px;
+
+        .partner-img {
+          width: 100px;
+        }
+      }
+
+      .partner-right {
+        width: calc(100% - 120px);
+        padding: 21px 15px;
+      }
     }
   }
 </style>

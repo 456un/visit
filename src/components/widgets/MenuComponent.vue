@@ -30,7 +30,7 @@ export default {
     <div class="close-btn" @click="hideMenu" v-show="openMenu"></div>
     <div class="menu-popup" v-show="openMenu">
       <RouterLink to="/" @click="hideMenu">Обо мне</RouterLink>
-      <RouterLink to="/partner">Партнерство</RouterLink>
+      <RouterLink to="/partner" @click="hideMenu">Партнерство</RouterLink>
       <RouterLink to="/blog" @click="hideMenu">Блог</RouterLink>
       <RouterLink to="/service" @click="hideMenu">Сервисы</RouterLink>
       <RouterLink to="/donate" @click="hideMenu">Поддержать</RouterLink>

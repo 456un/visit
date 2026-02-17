@@ -33,4 +33,15 @@ export default {
     font-size: 16px;
     margin-top: 14px;
   }
+
+  @media (max-width: 1023px) {
+    .desc {
+      font-size: 14px;
+    }
+
+    .example {
+      font-size: 14px;
+      margin-top: 14px;
+    }
+  }
 </style>
