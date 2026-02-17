@@ -4,11 +4,16 @@ import BlogMenuPage from "@/views/BlogMenuPage.vue";
 import ServicePage from "@/views/ServicePage.vue";
 import DonatePage from "@/views/DonatePage.vue";
 import BlogPostPage from "@/views/BlogPostPage.vue";
+import PartnerPage from "@/views/PartnerPage.vue";
 
 const routes = [
     {
         path: '/',
         component: HomePage,
+    },
+    {
+        path: '/partner',
+        component: PartnerPage,
     },
     {
         path: '/blog',

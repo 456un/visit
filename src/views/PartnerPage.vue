@@ -3,9 +3,16 @@ import {useHead} from "@vueuse/head";
 import DownloadSkillsComponent from "@/components/widgets/DownloadSkillsComponent.vue";
 import PhotoComponent from "@/components/layout/PhotoComponent.vue";
 import BlockInfoComponent from "@/components/widgets/BlockInfoComponent.vue";
+import PartnerComponent from "@/components/widgets/PartnerComponent.vue";
 
 export default {
-  name: "DonatePage.vue",
+  name: "PartnerPage",
+  components: {
+    BlockInfoComponent,
+    PhotoComponent,
+    DownloadSkillsComponent,
+    PartnerComponent,
+  },
   setup() {
     useHead({
       title: "Fullstack разработчик Владислав Сенников – Разработка, интеграция, оптимизация",
@@ -16,7 +23,7 @@ export default {
         },
         {
           property: "keywords",
-          content: "fullstack разработчик, PHP, Go, PostgreSQL, Laravel, Vue, веб-разработка, интеграция сервисов, поддержать/",
+          content: "fullstack разработчик, PHP, Go, PostgreSQL, Laravel, Vue, веб-разработка, интеграция сервисов, партнерство, сотрудничество/",
         },
         {
           property: "canonical",
@@ -45,11 +52,6 @@ export default {
       ]
     });
   },
-  components: {
-    BlockInfoComponent,
-    PhotoComponent,
-    DownloadSkillsComponent,
-  }
 }
 </script>
 
@@ -58,22 +60,13 @@ export default {
     <PhotoComponent class="photo-top"/>
     <DownloadSkillsComponent class="download-skills-top"/>
   </BlockInfoComponent>
-  <h1>Поддержать</h1>
-  <div class="donate">
-    <div class="qr"></div>
-    <div class="sber">
-      <p>Поддержать развитие сервисов через Сбер</p>
-      <p>https://www.sberbank.com/sms/pbpn?requisiteNumber=79585687951</p>
-    </div>
-    <div class="bank-other">
-      <p>Для других банков</p>
-      <p>Карта: 2202 2032 6137 2454</p>
-      <p>Счет: 40817810877031890416</p>
-    </div>
+  <h1>Партнерство</h1>
+  <div class="partner">
+    <PartnerComponent/>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .top-block {
   display: none;
 }
@@ -95,45 +88,10 @@ h1 {
   font-weight: 400;
 }
 
-.donate {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 58px;
-  margin-bottom: 50px;
-  width: 100%;
-
-  .qr {
-    width: 200px;
-    height: 200px;
-    background: transparent url("@/assets/img/donate-qr.png") no-repeat center center;
-    background-size: 200px 200px;
-  }
-
-  .sber, .bank-other {
-    word-break: break-all;
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    p {
-      margin: 0;
-    }
-
-    p:not(:first-child) {
-      margin-top: 3px;
-    }
-  }
-
-  .sber {
-    margin-top: 13px;
-  }
-
-  .bank-other {
-    margin-top: 30px;
-  }
+.partner {
+  margin-top: 28px;
+  overflow: hidden;
+  margin-bottom: 250px;
 }
 
 @media (max-width: 1023px) {
@@ -147,7 +105,7 @@ h1 {
     margin-bottom: 50px;
   }
 
-  .donate {
+  .partner {
     width: calc(100% + 40px);
   }
 }

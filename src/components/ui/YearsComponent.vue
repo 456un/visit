@@ -56,7 +56,7 @@ export default {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .years-component {
     width: 120px;
     font-size: 12px;

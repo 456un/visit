@@ -145,7 +145,7 @@ export default {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .step-item {
     .main {
       &.my-work {

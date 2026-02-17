@@ -20,6 +20,7 @@ export default {
 <template>
   <div class="menu">
     <RouterLink to="/">Обо мне</RouterLink>
+    <RouterLink to="/partner">Партнерство</RouterLink>
     <RouterLink to="/blog">Блог</RouterLink>
     <RouterLink to="/service">Сервисы</RouterLink>
     <RouterLink to="/donate">Поддержать</RouterLink>
@@ -29,6 +30,7 @@ export default {
     <div class="close-btn" @click="hideMenu" v-show="openMenu"></div>
     <div class="menu-popup" v-show="openMenu">
       <RouterLink to="/" @click="hideMenu">Обо мне</RouterLink>
+      <RouterLink to="/partner">Партнерство</RouterLink>
       <RouterLink to="/blog" @click="hideMenu">Блог</RouterLink>
       <RouterLink to="/service" @click="hideMenu">Сервисы</RouterLink>
       <RouterLink to="/donate" @click="hideMenu">Поддержать</RouterLink>
@@ -55,7 +57,7 @@ export default {
     display: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     .menu {
       display: none;
     }

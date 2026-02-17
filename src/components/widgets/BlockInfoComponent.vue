@@ -19,7 +19,7 @@ export default {
     border-radius: 8px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     .block-info {
       width: calc(100% - 10px);
       padding: 40px 25px;

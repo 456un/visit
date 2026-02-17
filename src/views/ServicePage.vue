@@ -110,7 +110,7 @@ h1 {
   font-weight: 400;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .top-block {
     display: block;
     background: transparent;

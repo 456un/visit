@@ -401,7 +401,7 @@ ul, ol {
   width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .top-block {
     display: block;
     background: transparent;

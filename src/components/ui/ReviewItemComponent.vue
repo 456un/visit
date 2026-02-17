@@ -49,7 +49,7 @@ export default {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .review {
     padding: 10px 18px;
     width: calc(100% - 36px);

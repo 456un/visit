@@ -45,7 +45,7 @@ main {
       width: calc(100% - 40px);
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1023px) {
       .content {
         margin-left: 0;
       }

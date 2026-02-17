@@ -34,7 +34,7 @@ export default {
     width: 100%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     .right-container {
       margin: 0 10px 0 10px;
     }
