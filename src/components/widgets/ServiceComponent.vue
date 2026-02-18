@@ -1,5 +1,10 @@
+<script setup>
+import moneyIcon from "@/assets/img/service/money.png";
+</script>
+
 <script>
 import SocialGroupComponent from "@/components/widgets/SocialGroupComponent.vue";
+import BtnIconHrefComponent from "@/components/ui/BtnIconHrefComponent.vue";
 
 export default {
   name: "ServiceComponent",
@@ -33,6 +38,7 @@ export default {
         <slot name="encode"></slot>
       </div>
       <div class="social-group">
+        <BtnIconHrefComponent title="поддержать" :srcIcon="moneyIcon" link="/donate" class="btn-icon"/>
         <SocialGroupComponent vk="https://vk.com/dev_node_service" telegram="https://t.me/dev_node_service"/>
       </div>
     </div>
@@ -77,6 +83,10 @@ export default {
     margin: 25px 0 25px 0;
     width: 100%;
     display: flex;
+
+    .btn-icon {
+      margin-right: 8px;
+    }
   }
 }
 </style>

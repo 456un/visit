@@ -23,7 +23,6 @@ export default {
     <RouterLink to="/partner">Партнерство</RouterLink>
     <RouterLink to="/blog">Блог</RouterLink>
     <RouterLink to="/service">Сервисы</RouterLink>
-    <RouterLink to="/donate">Поддержать</RouterLink>
   </div>
   <div class="menu-mobile">
     <div class="menu-btn" @click="showMenu" v-show="!openMenu"></div>
@@ -33,7 +32,6 @@ export default {
       <RouterLink to="/partner" @click="hideMenu">Партнерство</RouterLink>
       <RouterLink to="/blog" @click="hideMenu">Блог</RouterLink>
       <RouterLink to="/service" @click="hideMenu">Сервисы</RouterLink>
-      <RouterLink to="/donate" @click="hideMenu">Поддержать</RouterLink>
     </div>
   </div>
 </template>
