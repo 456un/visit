@@ -83,6 +83,10 @@ export default {
 @media (max-width: 1023px) {
   .contact-item-component {
     font-size: 14px;
+
+    .copy {
+      margin-left: auto;
+    }
   }
 }
 </style>

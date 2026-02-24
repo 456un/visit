@@ -91,7 +91,7 @@ h1 {
 .partner {
   margin-top: 28px;
   overflow: hidden;
-  margin-bottom: 250px;
+  margin-bottom: 45px;
 }
 
 @media (max-width: 1023px) {
