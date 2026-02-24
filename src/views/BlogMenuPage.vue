@@ -114,7 +114,7 @@ h1 {
 .blog {
   margin-top: 28px;
   overflow: hidden;
-  margin-bottom: 250px;
+  margin-bottom: 45px;
 }
 
 .social-group {

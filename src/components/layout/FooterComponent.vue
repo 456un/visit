@@ -25,6 +25,7 @@ export default {
     </div>
     <div class="contact">
       <ContactComponent />
+      <div class="years">2025<span class="dash">&mdash;</span>2026</div>
     </div>
   </footer>
 </template>
@@ -52,6 +53,38 @@ footer {
 
   .contact {
     margin-left: auto;
+
+    .years {
+      margin-top: 107px;
+      font-size: 14px;
+      text-align: right;
+
+      .dash {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .line {
+    display: none;
+  }
+
+  footer {
+    flex-direction: column;
+
+    .social {
+      margin-left: 0;
+    }
+
+    .contact {
+      margin-left: 0;
+
+      .years {
+        margin-top: 49px;
+      }
+    }
   }
 }
 </style>

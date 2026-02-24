@@ -158,7 +158,7 @@ a {
 .social-group {
   justify-content: right;
   align-items: center;
-  margin: 25px 0 200px 0;
+  margin: 25px 0 45px 0;
   width: 100%;
   display: flex;
 }
@@ -174,7 +174,11 @@ a {
     margin-bottom: 50px;
   }
 
-  .blog {
+  .article {
+    width: calc(100% + 40px);
+  }
+
+  .social-group {
     width: calc(100% + 40px);
   }
 }

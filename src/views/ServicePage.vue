@@ -100,6 +100,7 @@ export default {
 
 .services {
   margin-top: 23px;
+  margin-bottom: 20px;
 }
 
 h1 {

@@ -55,7 +55,7 @@ export default {
     background: transparent url("@/assets/img/copy.png") no-repeat center center;
     background-size: 25px 25px;
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 54px;
 
     &.m-auto {
       margin-left: auto;
@@ -77,6 +77,12 @@ export default {
     border-radius: 8px;
     font-size: 12px;
     white-space: nowrap;
+  }
+}
+
+@media (max-width: 1023px) {
+  .contact-item-component {
+    font-size: 14px;
   }
 }
 </style>
