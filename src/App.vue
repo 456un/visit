@@ -2,11 +2,12 @@
 import HeaderComponent from '@/components/layout/HeaderComponent.vue'
 import PhotoComponent from '@/components/layout/PhotoComponent.vue'
 import DownloadSkillsComponent from "@/components/widgets/DownloadSkillsComponent.vue";
+import FooterComponent from "@/components/layout/FooterComponent.vue";
 </script>
 
 <template>
   <div id="app">
-    <HeaderComponent></HeaderComponent>
+    <HeaderComponent/>
     <main>
       <div id="app-content">
         <div class="right-block">
@@ -18,6 +19,7 @@ import DownloadSkillsComponent from "@/components/widgets/DownloadSkillsComponen
         </div>
       </div>
     </main>
+    <FooterComponent/>
   </div>
 </template>
 
