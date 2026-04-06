@@ -39,7 +39,7 @@ export default {
       </div>
       <div class="social-group">
         <BtnIconHrefComponent title="поддержать" :srcIcon="moneyIcon" link="/donate" class="btn-icon"/>
-        <SocialGroupComponent vk="https://vk.com/dev_node_service" telegram="https://t.me/dev_node_service"/>
+        <SocialGroupComponent telegram="https://t.me/dev_node_service"/>
       </div>
     </div>
   </div>

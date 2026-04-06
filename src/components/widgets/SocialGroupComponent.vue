@@ -2,7 +2,6 @@
 export default {
   name: "SocialGroupComponent",
   props: [
-    "vk",
     "telegram",
   ],
 }
@@ -12,7 +11,6 @@ export default {
   <div class="social-group-component">
     <div class="social-links">
       <a :href="telegram" target="_blank" class="telegram"></a>
-      <a :href="vk" target="_blank" class="vk"></a>
     </div>
   </div>
 </template>
@@ -22,14 +20,14 @@ export default {
   display: flex;
   border-radius: 8px;
   border: 1px solid #1FA184;
-  width: 74px;
+  width: 44px;
   height: 42px;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   .social-links {
     display: flex;
-    margin-top: 8px;
     align-items: center;
 
     .telegram {
