@@ -10,17 +10,11 @@ export default {
     <div class="social-group">
       <div class="group-title">Для разработчиков</div>
       <div class="social-item">
-        ВК:&nbsp;<a href="https://vk.com/dev_node_service" target="_blank">https://vk.com/dev_node_service</a>
-      </div>
-      <div class="social-item">
         Telegram:&nbsp;<a href="https://t.me/dev_node_service" target="_blank">https://t.me/dev_node_service</a>
       </div>
     </div>
     <div class="social-group">
       <div class="group-title">Для бизнеса</div>
-      <div class="social-item">
-        ВК:&nbsp;<a href="https://vk.com/dev_node" target="_blank">https://vk.com/dev_node</a>
-      </div>
       <div class="social-item">
         Telegram:&nbsp;<a href="https://t.me/dev_node0" target="_blank">https://t.me/dev_node0</a>
       </div>

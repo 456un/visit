@@ -6,7 +6,6 @@ export default {
 
 <template>
   <div class="social-links">
-    <a href="https://vk.com/id826863937" class="vk" target="_blank"></a>
     <a href="https://t.me/AnSm456un" class="telegram" target="_blank"></a>
     <a href="mailto:456unansm@gmail.com" class="email"></a>
   </div>

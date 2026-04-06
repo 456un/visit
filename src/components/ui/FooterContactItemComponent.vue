@@ -43,6 +43,7 @@ export default {
   margin-top: 12px;
   align-items: center;
   position: relative;
+  min-width: 330px;
 
   a {
     text-decoration: none;

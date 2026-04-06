@@ -12,7 +12,6 @@ export default {
 <template>
   <div class="contact-component">
     <div class="title">Связаться со мной</div>
-    <FooterContactItemComponent label="ВК" link="https://vk.com/id826863937" text="https://vk.com/id826863937"/>
     <FooterContactItemComponent label="Telegram" link="https://t.me/AnSm456un" text="https://t.me/AnSm456un" :mAuto="true"/>
     <FooterContactItemComponent label="Email" link="mailto:456unansm@gmail.com" text="456unansm@gmail.com" :mAuto="true"/>
   </div>
