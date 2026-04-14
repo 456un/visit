@@ -1,5 +1,6 @@
 <script>
 import MenuDesktopItem from "@/components/ui/MenuDesktopItem.vue";
+import MenuMobileItem from "@/components/ui/MenuMobileItem.vue";
 
 export default {
   name: "MenuComponent",
@@ -22,6 +23,7 @@ export default {
   },
   components: {
     MenuDesktopItem,
+    MenuMobileItem,
   },
 }
 
@@ -39,9 +41,9 @@ export default {
     <div class="close-btn" @click="hideMenu" v-show="openMenu"></div>
     <div class="menu-popup" v-show="openMenu">
       <RouterLink to="/" @click="hideMenu">Обо мне</RouterLink>
+      <MenuMobileItem title="Продукты" :items="productsMenuItems" @close-menu="hideMenu"/>
       <RouterLink to="/partner" @click="hideMenu">Партнерство</RouterLink>
       <RouterLink to="/blog" @click="hideMenu">Блог</RouterLink>
-      <RouterLink to="/service" @click="hideMenu">Сервисы</RouterLink>
     </div>
   </div>
 </template>

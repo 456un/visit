@@ -15,7 +15,7 @@ export default {
       this.isOpen = !this.isOpen;
     },
     handleClickOutside(event) {
-      if (!event.target.closest('.menu-desktop')) {
+      if (!event.target.closest('.menu-mobile-group')) {
         this.isOpen = false;
       }
     },
@@ -30,16 +30,16 @@ export default {
 </script>
 
 <template>
-  <div class="menu-desktop" :class="{open: isOpen}" @click="toggleMenu">
+  <div class="menu-mobile-group" :class="{open: isOpen}" @click="toggleMenu">
     <div class="menu-desktop-title">{{ title }}</div>
-    <div class="menu-desktop-items" v-show="isOpen">
+    <div class="menu-mobile-items" v-show="isOpen">
       <RouterLink v-for="item in items" :to="item.link">{{ item.title }}</RouterLink>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.menu-desktop {
+.menu-mobile-group {
   margin-left: 30px;
   color: white;
   font-size: 16px;
@@ -54,7 +54,7 @@ export default {
     background-size: 12px 12px;
   }
 
-  .menu-desktop-items {
+  .menu-mobile-items {
     position: absolute;
     top: 45px;
     left: -52px;
