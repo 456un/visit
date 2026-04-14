@@ -1,6 +1,9 @@
 <script setup>
 import mobile1 from "@/assets/img/design/mobile-1.webp";
 import desktop1 from "@/assets/img/design/desktop-1.webp";
+
+import mobile2 from "@/assets/img/design/mobile-2.webp"
+import desktop2 from "@/assets/img/design/desktop-2.webp"
 </script>
 
 <script>
@@ -21,6 +24,12 @@ export default {
       link="https://www.figma.com/design/IocHGhPa9le2HN7TLOwxvy/%D0%92%D0%B8%D0%B7%D0%B8%D1%82%D0%BA%D0%B0?node-id=0-1&m=dev&t=IVi63ESkINM7N9JC-1"
       :mobileImg="mobile1"
       :desktopImg="desktop1"
+  />
+  <DesignItemComponent
+      title="очистка сообщений"
+      link="https://www.figma.com/design/V8MBxrvPGcNpK8UHaW7n5k/%D0%91%D0%B8%D1%82%D1%80%D0%B8%D0%BA%D1%8124?node-id=0-1&m=dev&t=MJBvRNwtXFzWESC7-1"
+      :mobileImg="mobile2"
+      :desktopImg="desktop2"
   />
 </template>
 
