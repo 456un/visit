@@ -1,9 +1,15 @@
 <script>
+import MenuDesktopItem from "@/components/ui/MenuDesktopItem.vue";
+
 export default {
   name: "MenuComponent",
   data() {
     return {
       openMenu: false,
+      productsMenuItems: [
+        {"title": "Модули Битрикс24", "link": "/bitrix24-module"},
+        {"title": "Сервисы", "link": "/service"},
+      ],
     };
   },
   methods: {
@@ -14,15 +20,19 @@ export default {
       this.openMenu = false;
     }
   },
+  components: {
+    MenuDesktopItem,
+  },
 }
+
 </script>
 
 <template>
   <div class="menu">
     <RouterLink to="/">Обо мне</RouterLink>
+    <MenuDesktopItem title="Продукты" :items="productsMenuItems"/>
     <RouterLink to="/partner">Партнерство</RouterLink>
     <RouterLink to="/blog">Блог</RouterLink>
-    <RouterLink to="/service">Сервисы</RouterLink>
   </div>
   <div class="menu-mobile">
     <div class="menu-btn" @click="showMenu" v-show="!openMenu"></div>
