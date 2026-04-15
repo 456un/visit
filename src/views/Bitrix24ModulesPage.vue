@@ -3,6 +3,7 @@ import {useHead} from "@vueuse/head";
 import DownloadSkillsComponent from "@/components/widgets/DownloadSkillsComponent.vue";
 import PhotoComponent from "@/components/layout/PhotoComponent.vue";
 import BlockInfoComponent from "@/components/widgets/BlockInfoComponent.vue";
+import Bitrix24Modules from "@/components/widgets/Bitrix24Modules.vue";
 
 export default {
   name: "DonatePage.vue",
@@ -49,6 +50,7 @@ export default {
     BlockInfoComponent,
     PhotoComponent,
     DownloadSkillsComponent,
+    Bitrix24Modules,
   }
 }
 </script>
@@ -60,6 +62,7 @@ export default {
   </BlockInfoComponent>
   <h1>Модули Битрикс24</h1>
   <div class="bitrix24-modules">
+    <Bitrix24Modules />
   </div>
 </template>
 
@@ -83,10 +86,6 @@ h1 {
   margin: 0;
   padding: 0;
   font-weight: 400;
-}
-
-.bitrix24-modules {
-
 }
 
 @media (max-width: 1023px) {

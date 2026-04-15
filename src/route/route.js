@@ -5,7 +5,7 @@ import ServicePage from "@/views/ServicePage.vue";
 import DonatePage from "@/views/DonatePage.vue";
 import BlogPostPage from "@/views/BlogPostPage.vue";
 import PartnerPage from "@/views/PartnerPage.vue";
-import Bitrix24Modules from "@/views/Bitrix24Modules.vue";
+import Bitrix24ModulesPage from "@/views/Bitrix24ModulesPage.vue";
 
 const routes = [
     {
@@ -32,7 +32,7 @@ const routes = [
     },
     {
         path: '/bitrix24-module',
-        component: Bitrix24Modules,
+        component: Bitrix24ModulesPage,
     },
 ];
 
