@@ -8,7 +8,7 @@ export default {
     return {
       openMenu: false,
       productsMenuItems: [
-        {"title": "Модули Битрикс24", "link": "/bitrix24-module"},
+        /*{"title": "Модули Битрикс24", "link": "/bitrix24-module"},*/
         {"title": "Сервисы", "link": "/service"},
       ],
     };
