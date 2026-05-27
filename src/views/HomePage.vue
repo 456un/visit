@@ -93,8 +93,8 @@ export default {
       <p>Не работаю со срочными заказами.</p>
       <p>Ставка:</p>
       <ul>
-        <li>Backend (написание кода на стороне сервера): <span class="discount">3000 руб/ч.</span> 1500 руб/ч.<sup>*</sup></li>
-        <li>Frontend/Верстка/Администрирование сервера и другое: <span class="discount">2500 руб/ч.</span> 1500 руб/ч.<sup>*</sup></li>
+        <li>Backend (написание кода на стороне сервера): <span class="discount">3000 руб/ч.</span> 2000 руб/ч.<sup>*</sup></li>
+        <li>Frontend/Верстка/Администрирование сервера и другое: <span class="discount">2500 руб/ч.</span> 2000 руб/ч.<sup>*</sup></li>
         <li>Дизайн (как хобби, только в свободное время): 500 руб/ч.</li>
       </ul>
       <p><sup>*</sup> - ставка пересмотрена в сторону снижения в рамках адаптации к текущим рыночным условиям и фокусе
@@ -144,6 +144,7 @@ export default {
             <div class="col-title">Другое</div>
             <ProgressBarComponent value="95" title="RabbitMQ"/>
             <ProgressBarComponent value="60" title="Docker"/>
+            <ProgressBarComponent value="60" title="Vagrant"/>
             <ProgressBarComponent value="80" title="Верстка"/>
             <ProgressBarComponent value="90" title="Системный анализ"/>
           </div>
@@ -155,6 +156,7 @@ export default {
             <div class="col-title">Фронт/верстка</div>
             <ProgressBarComponent value="99" title="HTML"/>
             <ProgressBarComponent value="80" title="SASS/SCSS/CSS"/>
+            <ProgressBarComponent value="70" title="Vue"/>
             <ProgressBarComponent value="40" title="React"/>
             <ProgressBarComponent value="80" title="JQuery"/>
             <ProgressBarComponent value="80" title="Bootstrap"/>
@@ -227,6 +229,7 @@ export default {
             <ProgressBarComponent value="99" title="Шаблоны"/>
             <ProgressBarComponent value="99" title="Компоненты"/>
             <ProgressBarComponent value="99" title="Модули"/>
+            <ProgressBarComponent value="95" title="Приложения"/>
             <ProgressBarComponent value="99" title="Rest API"/>
             <ProgressBarComponent value="99" title="Кэширование"/>
             <ProgressBarComponent value="99" title="Инфоблоки"/>

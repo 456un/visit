@@ -4,6 +4,9 @@ import desktop1 from "@/assets/img/design/desktop-1.webp";
 
 import mobile2 from "@/assets/img/design/mobile-2.webp"
 import desktop2 from "@/assets/img/design/desktop-2.webp"
+
+import mobile3 from "@/assets/img/design/mobile-3.webp"
+import desktop3 from "@/assets/img/design/desktop-3.webp"
 </script>
 
 <script>
@@ -30,6 +33,12 @@ export default {
       link="https://www.figma.com/design/V8MBxrvPGcNpK8UHaW7n5k/%D0%91%D0%B8%D1%82%D1%80%D0%B8%D0%BA%D1%8124?node-id=0-1&m=dev&t=MJBvRNwtXFzWESC7-1"
       :mobileImg="mobile2"
       :desktopImg="desktop2"
+  />
+  <DesignItemComponent
+      title="командировки"
+      link="https://www.figma.com/design/V8MBxrvPGcNpK8UHaW7n5k/%D0%91%D0%B8%D1%82%D1%80%D0%B8%D0%BA%D1%8124?node-id=73-396&t=QuGBeaTSizYjG6GL-1"
+      :mobileImg="mobile3"
+      :desktopImg="desktop3"
   />
 </template>
 
